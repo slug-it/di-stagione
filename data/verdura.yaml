@@ -1,0 +1,62 @@
+Aglio:
+    mesi: [Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre]
+Asparago:
+    mesi: [Marzo, Aprile, Maggio, Giugno]
+Bietola da costa:
+    mesi: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
+Carciofo:
+    mesi: [Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile]
+Carota:
+    mesi: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
+Cavolo broccolo:
+    mesi: [Febbraio, Marzo, Aprile, Maggio, Settembre, Ottobre, Novembre]
+Cavolfiore:
+    mesi: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
+Cavolo cappuccio:
+    mesi: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
+Cavolo verza:
+    mesi: [Settembre, Ottobre, Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile]
+Cetriolo:
+    mesi: [Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre]
+Cicoria:
+    mesi: [Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
+Cipolla:
+    mesi: [Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
+Fagiolo:
+    altri-nomi: [Fagiolino]
+    mesi: [Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre]
+Fava fresca:
+    altri-nomi: [Baccelli]
+    mesi: [Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre]
+Finocchio:
+    mesi: [Agosto, Settembre, Ottobre, Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile]
+Funghi:
+    mesi: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
+Insalate:
+    mesi: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
+Melanzana:
+    mesi: [Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre]
+Peperone:
+    mesi: [Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre]
+Pisello:
+    mesi: [Maggio, Giugno, Luglio]
+Pomodoro:
+    mesi: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
+Prezzemolo:
+    mesi: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
+Radicchio:
+    mesi: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
+Rapa:
+    mesi: [Ottobre, Novembre, Dicembre, Gennaio, Febbraio, Marzo]
+Ravanello:
+    mesi: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
+Sedano:
+    mesi: [Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre]
+Spinacio:
+    mesi: [Settembre, Ottobre, Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile, Maggio]
+Zucca:
+    mesi: [Settembre, Ottobre, Novembre, Dicembre, Gennaio, Febbraio]
+Zucchina:
+    mesi: [Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre]
+
+# mesi: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]

@@ -1,0 +1,50 @@
+Albicocche:
+    mesi: [Maggio, Giugno, Luglio, Agosto]
+Amarene:
+    mesi: [Giugno, Luglio]
+Anguria:
+    altri-nomi: [Cocomero]
+    mesi: [Giugno, Luglio, Agosto]
+Arance:
+    mesi: [Gennaio, Febbraio, Marzo, Aprile, Novembre, Dicembre]
+Caki:
+    mesi: [Ottobre, Novembre, Dicembre, Gennaio]
+Ciliegie:
+    mesi: [Maggio, Giugno, Luglio]
+Clementine:
+    mesi: [Ottobre, Novembre, Dicembre, Gennaio, Febbraio]
+Fragole:
+    mesi: [Aprile, Maggio, Giugno, Luglio]
+Kiwi:
+    mesi: [Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile, Maggio]
+Lamponi:
+    mesi: [Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre]
+Limoni:
+    mesi: [Ottobre, Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile]
+Fichi:
+    mesi: [Giugno, Luglio, Agosto, Settembre]
+Mandarini:
+    mesi: [Dicembre, Gennaio, Febbraio]
+Mele:
+    mesi: [Agosto, Settembre, Ottobre, Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile, Maggio]
+Meloni:
+    mesi: [Maggio, Giugno, Luglio, Agosto, Settembre]
+    altri-nomi: [Popone]
+Mirtilli:
+    mesi: [Luglio, Agosto, Settembre]
+Nespole:
+    mesi: [Aprile, Maggio]
+Pere:
+    mesi: [Agosto, Settembre, Ottobre, Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile, Maggio]
+Pesche:
+    mesi: [Giugno, Luglio, Agosto, Settembre]
+Pompelmi:
+    mesi: [Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile, Maggio]
+Prugne:
+    mesi: [Luglio, Agosto, Settembre]
+Susine:
+    mesi: [Giugno, Luglio, Agosto, Settembre]
+Uva:
+    mesi: [Agosto, Settembre, Ottobre, Novembre]
+
+# mesi: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
