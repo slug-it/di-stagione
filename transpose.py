@@ -31,7 +31,7 @@ def get_localized_months(lang):
 def transpose(adict):
     tr = defaultdict(list)
     for k in adict:
-        for v in adict[k]['mesi']:
+        for v in adict[k]['months']:
             tr[v].append(k)
     return dict(tr)
 
