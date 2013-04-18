@@ -40,7 +40,7 @@ def run(args):
     tr = transpose(source)
     res = []
     for month in get_localized_months(args.lang):
-        res += [{"month": month, "stuff": tr[month]}]
+        res += [{"month": month, "stuff": sorted(tr[month])}]
     yaml.dump(res, args.output)
 
 if __name__ == "__main__":
