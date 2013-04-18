@@ -3,7 +3,7 @@ Albicocche:
 Amarene:
     months: [Giugno, Luglio]
 Anguria:
-    altri-nomi: [Cocomero]
+    other-names: [Cocomero]
     months: [Giugno, Luglio, Agosto]
 Arance:
     months: [Gennaio, Febbraio, Marzo, Aprile, Novembre, Dicembre]
@@ -29,7 +29,7 @@ Mele:
     months: [Agosto, Settembre, Ottobre, Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile, Maggio]
 Meloni:
     months: [Maggio, Giugno, Luglio, Agosto, Settembre]
-    altri-nomi: [Poponi]
+    other-names: [Poponi]
 Mirtilli:
     months: [Luglio, Agosto, Settembre]
 Nespole:

@@ -1,103 +1,103 @@
 Aglio:
     months: [Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre]
-    foto: http://pixabay.com/it/aglio-tagliente-aromatico-tubero-5807/
+    image: http://pixabay.com/it/aglio-tagliente-aromatico-tubero-5807/
 Asparago:
     months: [Marzo, Aprile, Maggio, Giugno]
-    foto: http://pixabay.com/it/appetito-asparagi-cibo-verde-sano-2038/
+    image: http://pixabay.com/it/appetito-asparagi-cibo-verde-sano-2038/
 Bietola da costa:
     months: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
-    foto: http://pixabay.com/it/bietola-verdure-verde-sano-5370/
+    image: http://pixabay.com/it/bietola-verdure-verde-sano-5370/
 Carciofo:
     months: [Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile]
-    url: http://it.wikipedia.org/wiki/Carciofi
-    foto: http://pixabay.com/it/carciofi-verdure-verde-cuoco-1101/
+    info: http://it.wikipedia.org/wiki/Carciofi
+    image: http://pixabay.com/it/carciofi-verdure-verde-cuoco-1101/
 Carota:
     months: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
-    url: http://it.wikipedia.org/wiki/Carote
-    foto: http://pixabay.com/it/orange-carote-white-primo-piano-2794/
+    info: http://it.wikipedia.org/wiki/Carote
+    image: http://pixabay.com/it/orange-carote-white-primo-piano-2794/
 Cavolo broccolo:
-    altri-nomi: [Broccoli]
+    other-names: [Broccoli]
     months: [Febbraio, Marzo, Aprile, Maggio, Settembre, Ottobre, Novembre]
-    url: http://it.wikipedia.org/wiki/Cavolo_broccolo
-    foto: http://pixabay.com/it/broccoli-verdure-alimentari-cibo-5736/
+    info: http://it.wikipedia.org/wiki/Cavolo_broccolo
+    image: http://pixabay.com/it/broccoli-verdure-alimentari-cibo-5736/
 Cavolfiore:
     months: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
-    url: http://it.wikipedia.org/wiki/Cavolfiore
-    foto: http://pixabay.com/it/cavolfiore-kohl-cavolo-alimentari-68791/
+    info: http://it.wikipedia.org/wiki/Cavolfiore
+    image: http://pixabay.com/it/cavolfiore-kohl-cavolo-alimentari-68791/
 Cavolo cappuccio:
     months: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
-    url: http://it.wikipedia.org/wiki/Cavolo_cappuccio
-    foto: http://commons.wikimedia.org/wiki/File:Starr_070730-7852_Brassica_oleracea_var._capitata.jpg
+    info: http://it.wikipedia.org/wiki/Cavolo_cappuccio
+    image: http://commons.wikimedia.org/wiki/File:Starr_070730-7852_Brassica_oleracea_var._capitata.jpg
 Cavolo verza:
     months: [Settembre, Ottobre, Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile]
-    url: http://it.wikipedia.org/wiki/Cavolo_verza
-    foto: http://commons.wikimedia.org/wiki/File:Wirsingkohl.jpg
+    info: http://it.wikipedia.org/wiki/Cavolo_verza
+    image: http://commons.wikimedia.org/wiki/File:Wirsingkohl.jpg
 Cetriolo:
     months: [Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre]
-    foto: http://pixabay.com/it/cetriolo-cucumis-cucurbitaceae-88207/
-    # foto: http://commons.wikimedia.org/wiki/File:HK_SYP_Best_of_Best_Vegetable_green_Cucumbers_Aug-2012.JPG
+    image: http://pixabay.com/it/cetriolo-cucumis-cucurbitaceae-88207/
+    # image: http://commons.wikimedia.org/wiki/File:HK_SYP_Best_of_Best_Vegetable_green_Cucumbers_Aug-2012.JPG
 Cicoria:
     months: [Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
-    url: http://it.wikipedia.org/wiki/Cicoria
-    foto: 
+    info: http://it.wikipedia.org/wiki/Cicoria
+    image: 
 Cipolla:
     months: [Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
-    foto: http://pixabay.com/it/bulbi-di-cipolla-cibo-fresco-sano-84722/
+    image: http://pixabay.com/it/bulbi-di-cipolla-cibo-fresco-sano-84722/
 Fagiolo:
-    altri-nomi: [Fagiolino]
+    other-names: [Fagiolino]
     months: [Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre]
-    foto: 
+    image: 
 Fava fresca:
-    altri-nomi: [Baccello]
+    other-names: [Baccello]
     months: [Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre]
-    foto: http://commons.wikimedia.org/wiki/File:Pecorino_romano_e_fave.jpg
+    image: http://commons.wikimedia.org/wiki/File:Pecorino_romano_e_fave.jpg
 Finocchio:
     months: [Agosto, Settembre, Ottobre, Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile]
-    foto: 
+    image: 
 Funghi:
     months: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
-    foto: http://pixabay.com/it/funghi-fungo-cremini-91333/
+    image: http://pixabay.com/it/funghi-fungo-cremini-91333/
 Insalate:
     months: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
-    foto: http://pixabay.com/it/impianto-vegetale-foglia-insalata-69447/
+    image: http://pixabay.com/it/impianto-vegetale-foglia-insalata-69447/
 Melanzana:
     months: [Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre]
-    foto: http://pixabay.com/it/melanzana-bio-dieta-cena-mangiare-1809/
+    image: http://pixabay.com/it/melanzana-bio-dieta-cena-mangiare-1809/
 Peperone:
     months: [Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre]
-    foto: http://pixabay.com/it/pepe-giallo-cibo-verdure-vitamine-22111/
-    #foto: http://pixabay.com/it/verdure-paprika-colorato-verde-20710/
+    image: http://pixabay.com/it/pepe-giallo-cibo-verdure-vitamine-22111/
+    #image: http://pixabay.com/it/verdure-paprika-colorato-verde-20710/
 Pisello:
     months: [Maggio, Giugno, Luglio]
-    foto: http://pixabay.com/it/sfondo-dieta-cibo-fresco-72339/
+    image: http://pixabay.com/it/sfondo-dieta-cibo-fresco-72339/
 Pomodoro:
     months: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
-    foto: http://pixabay.com/it/pomodori-verdure-rosso-alimentari-5356/
+    image: http://pixabay.com/it/pomodori-verdure-rosso-alimentari-5356/
 Porri:
     months: []
-    foto: http://pixabay.com/it/porro-cipollotto-alimentari-mercato-65277/
+    image: http://pixabay.com/it/porro-cipollotto-alimentari-mercato-65277/
 Prezzemolo:
     months: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
-    foto: http://pixabay.com/it/prezzemolo-verde-pianta-spice-78807/
+    image: http://pixabay.com/it/prezzemolo-verde-pianta-spice-78807/
 Radicchio:
     months: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
-    foto: http://pixabay.com/it/radicchio-insalata-foglie-di-lattuga-74315/
+    image: http://pixabay.com/it/radicchio-insalata-foglie-di-lattuga-74315/
 Rapa:
     months: [Ottobre, Novembre, Dicembre, Gennaio, Febbraio, Marzo]
-    foto: 
+    image: 
 Ravanello:
     months: [Gennaio, Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre, Dicembre]
-    foto: http://pixabay.com/it/ravanelli-verdure-alimentari-cibo-5740/
+    image: http://pixabay.com/it/ravanelli-verdure-alimentari-cibo-5740/
 Sedano:
     months: [Febbraio, Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre]
-    foto: http://pixabay.com/it/sedano-verdure-sano-vitamine-74333/
+    image: http://pixabay.com/it/sedano-verdure-sano-vitamine-74333/
 Spinacio:
     months: [Settembre, Ottobre, Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile, Maggio]
-    foto: http://pixabay.com/it/spinaci-reali-spinaci-verdure-verde-73911/
+    image: http://pixabay.com/it/spinaci-reali-spinaci-verdure-verde-73911/
 Zucca:
     months: [Settembre, Ottobre, Novembre, Dicembre, Gennaio, Febbraio]
-    foto: http://pixabay.com/it/autunno-zucche-autunno-d-oro-77008/
+    image: http://pixabay.com/it/autunno-zucche-autunno-d-oro-77008/
 Zucchina:
     months: [Marzo, Aprile, Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre, Novembre]
-    foto: 
+    image: 
 
