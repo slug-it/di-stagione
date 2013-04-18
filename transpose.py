@@ -3,6 +3,7 @@
 import argparse
 import calendar
 from collections import defaultdict
+import copy
 
 import yaml
 
@@ -30,9 +31,11 @@ def get_localized_months(lang):
 
 def transpose(adict):
     tr = defaultdict(list)
+    idict = dict(adict)
     for k in adict:
+        idict[k]['name'] = k
         for v in adict[k]['months']:
-            tr[v].append(k)
+            tr[v].append(copy.deepcopy(idict[k]))
     return dict(tr)
 
 def run(args):
@@ -40,7 +43,7 @@ def run(args):
     tr = transpose(source)
     res = []
     for month in get_localized_months(args.lang):
-        res += [{"month": month, "stuff": sorted(tr[month])}]
+        res += [{"month": month, "stuff": sorted(tr[month], key=lambda d: d['name'])}]
     yaml.dump(res, args.output)
 
 if __name__ == "__main__":
