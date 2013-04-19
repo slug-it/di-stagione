@@ -3,6 +3,7 @@
 # Html generation scripts for Di Stagione
 # Copyright 2013 Matteo Bertini
 
+import os
 import re
 import unicodedata
 import argparse
@@ -64,4 +65,7 @@ def args():
 
 if __name__ == "__main__":
     produce_by_month = yaml.load(open('data/it/produce-by-month.yaml'))
-    globals()['generate_'+args().target](produce_by_month)
+    target = args().target
+    if not os.path.exists('./www'):
+        os.mkdir('./www')
+    globals()['generate_'+target](produce_by_month)
