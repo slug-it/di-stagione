@@ -1,4 +1,4 @@
-#! /usr/bin/evn python3
+#!/usr/bin/env python3
 # -*- encoding: utf-8 -*-
 # Html generation scripts for Di Stagione
 # Copyright 2013 Matteo Bertini
