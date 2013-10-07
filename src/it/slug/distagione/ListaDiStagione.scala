@@ -1,14 +1,14 @@
 package it.slug.distagione
 
-import android.app.Activity
 import android.os.Bundle
+import org.scaloid.common._
 
-class ListaDiStagione extends Activity
-{
-    /** Called when the activity is first created. */
-    override def onCreate(savedInstanceState: Bundle) : Unit =
-    {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.main)
+class ListaDiStagione extends SActivity {
+  override def onCreate(savedInstanceState: Bundle) {
+    super.onCreate(savedInstanceState)
+
+    contentView = new SVerticalLayout {
+      STextView("Hello from Scaloid")
     }
+  }
 }
