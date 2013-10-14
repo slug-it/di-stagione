@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.graphics.Typeface
 
 import org.scaloid.common._
+import scala.language.postfixOps
 
 object ListaDiStagione {
   var tf_title: Typeface = null
@@ -19,7 +20,7 @@ class ListaDiStagione extends SActivity {
       ListaDiStagione.tf_element = Typeface.createFromAsset(getAssets(), "fonts/SortsMillGoudy-Regular.ttf")
     }
     contentView = new SVerticalLayout {
-      STextView("Hello from Scaloid").setTypeface(ListaDiStagione.tf_title)
+      STextView("Hello from Scaloid").typeface(ListaDiStagione.tf_title).textSize(18 sp)
       val produces = SArrayAdapter("Primo", "Secondo", "Terzo").style(_.textColor(Color.YELLOW).typeface(ListaDiStagione.tf_element))
       SListView().setAdapter(produces)
     }
