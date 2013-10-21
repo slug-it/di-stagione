@@ -10,7 +10,6 @@ Requirements
 
 - `export ANDROID_HOME=/opt/adt-bundle-linux/sdk/`
 - `export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH`
-- aggiornare `sdk.dir` in `local.properties` (se non lo fate protesterà adb suggerendo il comando per fare l'update del progetto)
 - Installare [scala-sbt](http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html)
 - `~$ sbt android:package` scarica tutte le dipendenze ed i plugin e genera un file .apk da mandare al telefono/emulatore
-- `adb install bin/di-stagione-debug.apk` dopo aver messo 
+- Connettere il telefono e lanciare `adb install bin/di-stagione-debug.apk`
