@@ -20,7 +20,10 @@ class ListaDiStagione extends SActivity {
       ListaDiStagione.tf_element = Typeface.createFromAsset(getAssets(), "fonts/SortsMillGoudy-Regular.ttf")
     }
     contentView = new SVerticalLayout {
-      STextView("Hello from Scaloid").typeface(ListaDiStagione.tf_title).textSize(18 sp)
+      style {
+        case t: STextView => t.textSize(22 sp)
+      }
+      STextView("Hello from Scaloid").typeface(ListaDiStagione.tf_title)
       val produces = SArrayAdapter("Primo", "Secondo", "Terzo").style(_.textColor(Color.YELLOW).typeface(ListaDiStagione.tf_element))
       SListView().setAdapter(produces)
     }
