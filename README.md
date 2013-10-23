@@ -12,4 +12,4 @@ Requirements
 - `export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH`
 - Installare [scala-sbt](http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html)
 - `~$ sbt android:package` scarica tutte le dipendenze ed i plugin e genera un file .apk da mandare al telefono/emulatore
-- Connettere il telefono e lanciare `adb install bin/di-stagione-debug.apk`
+- Connettere il telefono e lanciare `adb install -r bin/di-stagione-debug.apk`
