@@ -1,31 +1,19 @@
 package it.slug.distagione
 
+import android.app.Activity
 import android.os.Bundle
 import android.graphics.Color
 import android.graphics.Typeface
 
-import org.scaloid.common._
-import scala.language.postfixOps
 
-object ListaDiStagione {
-  var tf_title: Typeface = null
-  var tf_element: Typeface = null
-}
-
-class ListaDiStagione extends SActivity {
-  onCreate {
-    // FIXME: do this one time setup in the constructor
-    if (ListaDiStagione.tf_title == null) {
-      ListaDiStagione.tf_title = Typeface.createFromAsset(getAssets(), "fonts/OverlockSC-Regular.ttf")
-      ListaDiStagione.tf_element = Typeface.createFromAsset(getAssets(), "fonts/SortsMillGoudy-Regular.ttf")
-    }
-    contentView = new SVerticalLayout {
-      style {
-        case t: STextView => t.textSize(22 sp)
-      }
-      STextView("Hello from Scaloid").typeface(ListaDiStagione.tf_title)
-      val produces = SArrayAdapter("Primo", "Secondo", "Terzo").style(_.textColor(Color.YELLOW).typeface(ListaDiStagione.tf_element))
-      SListView().setAdapter(produces)
-    }
+class ListaDiStagione extends Activity with TypedViewHolder {
+  /* The val is `lazy` because the context is not ready during the initialization
+   * but will be ready when `onCreate` will be triggered */
+  lazy val tf_title = Typeface.createFromAsset(getAssets, "fonts/OverlockSC-Regular.ttf")
+  lazy val tf_element = Typeface.createFromAsset(getAssets, "fonts/SortsMillGoudy-Regular.ttf")
+  override def onCreate(saved: Bundle) : Unit = {
+    super.onCreate(saved)
+    setContentView(R.layout.main)
+    findView(TR.text).setTypeface(tf_title)
   }
 }
