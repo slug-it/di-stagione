@@ -13,3 +13,13 @@ Requirements
 - Installare [scala-sbt](http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html)
 - `~$ sbt android:package` scarica tutte le dipendenze ed i plugin e genera un file .apk da mandare al telefono/emulatore
 - Connettere il telefono e lanciare `adb install -r bin/di-stagione-debug.apk`
+
+Reference
+=========
+
+Di solito le liste vengono popolate con dei template presenti nell'sdk:
+- http://stackoverflow.com/questions/3663745/what-is-android-r-layout-simple-list-item-1
+
+Per creare dei "componenti" è possibile 1) includere un layout xml 2) estendere una View/Layout:
+- http://stackoverflow.com/questions/2289730/android-layout-is-reusable-component-ui-possible
+- http://developer.android.com/guide/topics/ui/custom-components.htm3l
