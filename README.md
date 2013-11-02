@@ -23,3 +23,6 @@ Di solito le liste vengono popolate con dei template presenti nell'sdk:
 Per creare dei "componenti" è possibile 1) includere un layout xml 2) estendere una View/Layout:
 - http://stackoverflow.com/questions/2289730/android-layout-is-reusable-component-ui-possible
 - http://developer.android.com/guide/topics/ui/custom-components.html
+
+Esempi dell'SDK tradotti in scala (senza nessuna estensione particolare)
+- https://github.com/michelou/android-examples/tree/master/android-sdk
