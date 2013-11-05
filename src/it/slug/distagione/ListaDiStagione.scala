@@ -4,6 +4,11 @@ import android.app.Activity
 import android.os.Bundle
 import android.graphics.Color
 import android.graphics.Typeface
+import android.widget.Button
+
+// customized button
+import android.content.Context
+import android.util.AttributeSet
 
 
 class ListaDiStagione extends Activity with TypedViewHolder {
@@ -15,5 +20,13 @@ class ListaDiStagione extends Activity with TypedViewHolder {
     super.onCreate(saved)
     setContentView(R.layout.main)
     findView(TR.text).setTypeface(tf_title)
+  }
+}
+
+class SquareButton(context: Context, attrs: AttributeSet) extends Button(context, attrs) {
+  override def onMeasure(width: Int, height: Int) {
+    super.onMeasure(width, height)
+    val side = List(getMeasuredWidth, getMeasuredHeight).min
+    setMeasuredDimension(side, side)
   }
 }
