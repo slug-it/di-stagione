@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Di Stagione</string>
+    <string name="jan">G</string>
+    <string name="feb">F</string>
+    <string name="mar">M</string>
+    <string name="apr">A</string>
+    <string name="may">M</string>
+    <string name="jun">G</string>
+    <string name="jul">L</string>
+    <string name="aug">A</string>
+    <string name="sep">S</string>
+    <string name="oct">O</string>
+    <string name="nov">N</string>
+    <string name="dec">D</string>
 </resources>
