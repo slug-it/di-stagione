@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Di Stagione</string>
+    <string name="month_detail_activity_name">Dettaglio Mese</string>
     <string name="jan">G</string>
     <string name="feb">F</string>
     <string name="mar">M</string>
@@ -13,4 +14,17 @@
     <string name="oct">O</string>
     <string name="nov">N</string>
     <string name="dec">D</string>
+    <string name="jan_ext">Gennaio</string>
+    <string name="feb_ext">Febbraio</string>
+    <string name="mar_ext">Marzo</string>
+    <string name="apr_ext">Aprile</string>
+    <string name="may_ext">Maggio</string>
+    <string name="jun_ext">June</string>
+    <string name="jul_ext">Luglio</string>
+    <string name="aug_ext">Agosto</string>
+    <string name="sep_ext">Settembre</string>
+    <string name="oct_ext">Ottobre</string>
+    <string name="nov_ext">Novembre</string>
+    <string name="dec_ext">Dicembre</string>
+    <string name="test_detail">Dettaglio Mese</string>
 </resources>
