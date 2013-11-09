@@ -27,7 +27,8 @@ Example of file content:
     cfg['ANDROID_HOME'] = '/opt/android-sdk-linux'
 
 Step 3 (apk build) can be skipped with the "-r" command-line option.
-Step 6 is enabled with the "-l" command-line option.
+Step 6 is enabled with the "-l" command-line option. If the logcat-color 
+command is found, uses it to display app-specific logs only.
 Use the "-v" option to enable verbose mode.
 """
 
@@ -180,10 +181,9 @@ def main():
             return 1
 
     print 'launching app..'
-    mainActivity = 'ListaDiStagione'
     packageName = '.'.join(['it', 'slug', 'distagione'])
-    extPackageName = '.'.join([packageName, mainActivity])
-    activityCompleteName = '/'.join([packageName, extPackageName])
+    activityName = '.'.join([packageName, 'ListaDiStagione'])
+    activityCompleteName = '/'.join([packageName, activityName])
     cmd = ['adb', 'shell', 'am', 'start', '-n', activityCompleteName]
     if subprocess.call(cmd, **cmdopts) != 0:
         print 'error while launching app..'
@@ -194,7 +194,10 @@ def main():
             print ''
             return
         signal.signal(signal.SIGINT, sighndl)
-        subprocess.call(['adb', 'logcat'], env=envcopy)
+        cmd = ['adb', 'logcat', 'it.slug.distagione:V', '*:S']
+        if len(which('logcat-color')) > 0:
+            cmd = ['logcat-color', 'it.slug.distagione:V', '*:S']
+        subprocess.call(cmd, env=envcopy)
 
     print 'Done!'
     return 0
