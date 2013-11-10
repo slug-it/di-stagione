@@ -4,10 +4,10 @@ import android.app.Activity;
 import android.os.Bundle;
 
 
-class MonthDetailActivity extends Activity {
+class ItemDetailActivity extends Activity {
 
     override def onCreate(savedInstanceState: Bundle) : Unit = {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.month_detail);
+        setContentView(R.layout.item_detail);
     }
 }

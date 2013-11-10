@@ -84,6 +84,13 @@ def createCmdlineParser():
         default=False,
         help='show real-time log after the launch step'
         )
+    parser.add_option(
+        '--log-all',
+        dest='logcat_all',
+        action='store_true',
+        default=False,
+        help='show system-wide logs (not application-only)'
+        )
     return parser
 
 def loadConfigurationFile():
@@ -189,14 +196,16 @@ def main():
         print 'error while launching app..'
         return 1
 
-    if opts.logcat:
+    if opts.logcat or opts.logcat_all:
         def sighndl(s, f):
             print ''
             return
         signal.signal(signal.SIGINT, sighndl)
-        cmd = ['adb', 'logcat', 'it.slug.distagione:V', '*:S']
+        cmd = ['adb', 'logcat']
         if len(which('logcat-color')) > 0:
-            cmd = ['logcat-color', 'it.slug.distagione:V', '*:S']
+            cmd = ['logcat-color']
+        if not opts.logcat_all:
+            cmd.extend(['it.slug.distagione:V', '*:S'])
         subprocess.call(cmd, env=envcopy)
 
     print 'Done!'

@@ -34,7 +34,7 @@ class ListaDiStagione extends Activity with TypedViewHolder {
     item.getItemId() match {
       case R.id.test_detail_menu => {
         val intent = new Intent(ListaDiStagione.this, 
-                                classOf[MonthDetailActivity])
+                                classOf[ItemDetailActivity])
         startActivity(intent)
         return true
       }
