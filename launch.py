@@ -78,18 +78,10 @@ def createCmdlineParser():
         help='skip the build step and run the app directly'
         )
     parser.add_option(
-        '-l', '--logcat',
+        '-l', '--log',
         dest='logcat',
-        action='store_true',
-        default=False,
-        help='show real-time log after the launch step'
-        )
-    parser.add_option(
-        '--log-all',
-        dest='logcat_all',
-        action='store_true',
-        default=False,
-        help='show system-wide logs (not application-only)'
+        default=None,
+        help='show app log with the specified debug level'
         )
     return parser
 
@@ -196,16 +188,15 @@ def main():
         print 'error while launching app..'
         return 1
 
-    if opts.logcat or opts.logcat_all:
+    if opts.logcat != None:
+        subprocess.call(['adb', 'logcat', '-c'], env=envcopy)
         def sighndl(s, f):
             print ''
             return
         signal.signal(signal.SIGINT, sighndl)
         cmd = ['adb', 'logcat']
         if len(which('logcat-color')) > 0:
-            cmd = ['logcat-color']
-        if not opts.logcat_all:
-            cmd.extend(['it.slug.distagione:V', '*:S'])
+            cmd = ['logcat-color', '*:' + opts.logcat]
         subprocess.call(cmd, env=envcopy)
 
     print 'Done!'
