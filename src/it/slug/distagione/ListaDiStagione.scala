@@ -12,6 +12,7 @@ import android.view.View
 import android.view.MenuItem
 import android.util.Log
 import android.util.AttributeSet
+import it.slug.distagione.MonthDetailActivity
 
 
 class ListaDiStagione extends Activity with TypedViewHolder {
@@ -35,6 +36,12 @@ class ListaDiStagione extends Activity with TypedViewHolder {
       case R.id.test_detail_menu => {
         val intent = new Intent(ListaDiStagione.this, 
                                 classOf[ItemDetailActivity])
+        startActivity(intent)
+        return true
+      }
+      case R.id.test_detail_month => {
+        val intent = new Intent(ListaDiStagione.this,
+                                classOf[MonthDetailActivity])
         startActivity(intent)
         return true
       }

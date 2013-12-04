@@ -83,6 +83,13 @@ def createCmdlineParser():
         default=None,
         help='show app log with the specified debug level'
         )
+    parser.add_option(
+        '-c', '--clean',
+        dest='clean',
+        action='store_true',
+        default=False,
+        help='clean environment'
+        )
     return parser
 
 def loadConfigurationFile():
@@ -164,6 +171,12 @@ def main():
     cmdopts = {'env': envcopy}
     if not opts.verbose:
         cmdopts.update({'stdout': subprocess.PIPE, 'stderr':subprocess.PIPE})
+
+    if opts.clean:
+        print 'cleaning scala environment..'
+        # the standard "sbt clean" does not remove all sbt artifacts
+        # so we perform a deeper clean with find command
+        os.system('find . -name target -type d -exec rm -rf {} \; -prune')
 
     if not opts.run:
         print 'building apk..'
