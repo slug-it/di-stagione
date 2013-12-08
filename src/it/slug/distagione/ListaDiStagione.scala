@@ -12,7 +12,6 @@ import android.view.View
 import android.view.MenuItem
 import android.util.Log
 import android.util.AttributeSet
-import it.slug.distagione.MonthDetailActivity
 
 
 class ListaDiStagione extends Activity with TypedViewHolder {
@@ -20,6 +19,9 @@ class ListaDiStagione extends Activity with TypedViewHolder {
    * but will be ready when `onCreate` will be triggered */
   lazy val tf_title = Typeface.createFromAsset(getAssets, "fonts/OverlockSC-Regular.ttf")
   lazy val tf_element = Typeface.createFromAsset(getAssets, "fonts/SortsMillGoudy-Regular.ttf")
+
+  val testSingleton = DataSource
+
   override def onCreate(saved: Bundle) : Unit = {
     super.onCreate(saved)
     setContentView(R.layout.main)
