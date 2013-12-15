@@ -22,7 +22,7 @@ object DataSource  {
     /* ------------ private members ---------------------------------------- */
     private def fillMonthNames() : Array[Int] = {
         var names = new Array[Int](12)
-        
+
         names(0) = R.string.jan_ext
         names(1) = R.string.feb_ext
         names(2) = R.string.mar_ext

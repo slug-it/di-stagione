@@ -36,7 +36,7 @@ class ListaDiStagione extends Activity with TypedViewHolder {
   override def onOptionsItemSelected(item: MenuItem) : Boolean = {
     item.getItemId() match {
       case R.id.test_detail_menu => {
-        val intent = new Intent(ListaDiStagione.this, 
+        val intent = new Intent(ListaDiStagione.this,
                                 classOf[ItemDetailActivity])
         startActivity(intent)
         return true

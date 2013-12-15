@@ -5,14 +5,40 @@ import android.support.v4.app.FragmentActivity
 import android.support.v4.app.FragmentManager
 
 
-class MonthDetailActivity extends FragmentActivity with TypedViewHolder {
+class MonthDetailActivity extends FragmentActivity with TypedViewHolder 
+{
+    /* ------------ ctor --------------------------------------------------- */
+    private var mCurrentMonth = 0
+    private var listeners: List[Int => Unit] = Nil
+    /* --------------------------------------------------------------------- */
 
+    /* ------------ protected members -------------------------------------- */
     override def onCreate(savedInstanceState: Bundle) : Unit = {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.month_detail)
 
-        val fragManager = getSupportFragmentManager()
-        val pagerAdapter = new MonthDetailPagerAdapter(fragManager, this)
-        findView(TR.month_pager).setAdapter(pagerAdapter)
+        // widgets
+        val pagerWidget = findView(TR.month_pager)
+
+        // controllers
+        var mCurrentMonth = 0
+        val pagerController = new MonthDetailPagerController(pagerWidget, this)
     }
+    /* --------------------------------------------------------------------- */
+
+    /* ------------ public members ----------------------------------------- */
+    def currentMonth = mCurrentMonth
+
+    def currentMonth_= (newMonth: Int): Unit = {
+        if (newMonth == mCurrentMonth) return
+        mCurrentMonth = newMonth
+        notifyMonth()
+    }
+
+    def addListener(listener: Int => Unit): Unit = listeners ::= listener
+    /* --------------------------------------------------------------------- */
+
+    /* ------------ private members ---------------------------------------- */
+    private def notifyMonth(): Unit = for (l <- listeners) l(mCurrentMonth)
+    /* --------------------------------------------------------------------- */
 }
