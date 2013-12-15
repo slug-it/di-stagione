@@ -52,7 +52,6 @@ class MonthDetailPageFragment(val fixedContent: String) extends Fragment {
         text.setText(_fixedContent);
         text.setTextSize(20 * getResources().getDisplayMetrics().density);
         text.setPadding(20, 20, 20, 20);
-
         var layout = new LinearLayout(getActivity());
         layout.setLayoutParams(
             new LayoutParams(
