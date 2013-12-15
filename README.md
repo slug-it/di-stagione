@@ -26,3 +26,7 @@ Per creare dei "componenti" è possibile 1) includere un layout xml 2) estendere
 
 Esempi dell'SDK tradotti in scala (senza nessuna estensione particolare)
 - https://github.com/michelou/android-examples/tree/master/android-sdk
+
+Temi per widget custom
+- http://stackoverflow.com/questions/4493947/how-to-define-theme-style-item-for-custom-widget
+- https://thenewcircle.com/s/post/1444/styles_and_themes

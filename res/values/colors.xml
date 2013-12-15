@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_winter_months">#ffCCFFFF</color>
+    <color name="background_spring_months">#ff99FF99</color>
+    <color name="background_summer_months">#ffFFFF99</color>
+    <color name="background_autumn_months">#ffFFCC99</color>
+</resources>
