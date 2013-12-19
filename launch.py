@@ -27,7 +27,7 @@ Example of file content:
     cfg['ANDROID_HOME'] = '/opt/android-sdk-linux'
 
 Step 3 (apk build) can be skipped with the "-r" command-line option.
-Step 6 is enabled with the "-l" command-line option. If the logcat-color 
+Step 6 is enabled with the "-l" command-line option. If the logcat-color
 command is found, uses it to display app-specific logs only.
 Use the "-v" option to enable verbose mode.
 """
@@ -65,8 +65,8 @@ def which(name, flags=os.X_OK):
 def createCmdlineParser():
     parser = optparse.OptionParser('usage: python %prog [options]')
     parser.add_option(
-        '-v', '--verbose', 
-        dest='verbose', 
+        '-v', '--verbose',
+        dest='verbose',
         action='store_true',
         default=False,
         help='enable verbose mode')
@@ -114,7 +114,7 @@ def main():
     global opts
     parser = createCmdlineParser()
     (opts, args) = parser.parse_args()
-    
+
     print 'loading launch configuration..'
     launchCfg = loadConfigurationFile()
 
@@ -128,7 +128,7 @@ def main():
     envcopy = os.environ.copy()
     androidHome = envcopy.get('ANDROID_HOME')
     if androidHome == None:
-        
+
         # search ANDROID_HOME in the launch configuration file
         androidHome = launchCfg.get('ANDROID_HOME')
         if androidHome == None:
@@ -142,7 +142,7 @@ def main():
         platformToolsDir = os.path.join(androidHome, 'platform-tools')
         envcopy['ANDROID_HOME'] = androidHome
         envcopy['PATH'] = ':'.join([
-            toolsDir, 
+            toolsDir,
             platformToolsDir,
             envcopy['PATH']])
     else:
@@ -152,15 +152,15 @@ def main():
 
     print 'checking device availability..'
     p = subprocess.Popen(
-            ['adb', 'devices'], 
-            env=envcopy, 
+            ['adb', 'devices'],
+            env=envcopy,
             stdout=subprocess.PIPE
             )
     devicesOutput = p.communicate()[0]
     devicesLines = devicesOutput.split('\n')
     devicePresent = False
     for line in devicesLines[1:]:
-        if len(line) > 0:
+        if len(line.strip()) > 0:
             devicePresent = True
             break
     if not devicePresent:
