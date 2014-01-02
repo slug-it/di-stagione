@@ -71,6 +71,12 @@ def createCmdlineParser():
         default=False,
         help='enable verbose mode')
     parser.add_option(
+        '-b', '--build-only',
+        dest='buildOnly',
+        action='store_true',
+        default=False
+        )
+    parser.add_option(
         '-r', '--run',
         dest='run',
         action='store_true',
@@ -184,6 +190,10 @@ def main():
         if subprocess.call(cmd, **cmdopts) != 0:
             print 'errors found while building the apk'
             return 1
+
+        if opts.buildOnly:
+            print 'OK'
+            return 0
 
         print 'installing apk..'
         apkfile = os.path.join('bin', 'di-stagione-debug.apk')

@@ -4,10 +4,9 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >
-    <TextView
-            android:textColor="?android:textColorPrimary"
+    <it.slug.distagione.TabBar
+            android:id="@+id/month_bar"
             android:textSize="32dp"
-            android:text="Header scrollabile mesi."
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" />
     <android.support.v4.view.ViewPager
