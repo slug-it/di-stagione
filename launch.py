@@ -71,7 +71,6 @@ def createCmdlineParser():
         help='enable verbose mode')
     parser.add_option(
         '-b', '--build-only',
-        dest='buildOnly',
         action='store_true',
         default=False,
         help="build the apk without running"
@@ -154,22 +153,23 @@ def main():
         # correctly set up
         pass
 
-    print 'checking device availability..'
-    p = subprocess.Popen(
-            ['adb', 'devices'],
-            env=envcopy,
-            stdout=subprocess.PIPE
-            )
-    devicesOutput = p.communicate()[0]
-    devicesLines = devicesOutput.split('\n')
-    devicePresent = False
-    for line in devicesLines[1:]:
-        if len(line.strip()) > 0:
-            devicePresent = True
-            break
-    if not devicePresent:
-        print 'no device found - hurry up and connect your phone!'
-        return 1
+    if not opts.build_only:
+        print 'checking device availability..'
+        p = subprocess.Popen(
+                ['adb', 'devices'],
+                env=envcopy,
+                stdout=subprocess.PIPE
+                )
+        devicesOutput = p.communicate()[0]
+        devicesLines = devicesOutput.split('\n')
+        devicePresent = False
+        for line in devicesLines[1:]:
+            if len(line.strip()) > 0:
+                devicePresent = True
+                break
+        if not devicePresent:
+            print 'no device found - hurry up and connect your phone!'
+            return 1
 
     # prepares the command options
     cmdopts = {'env': envcopy}
@@ -189,7 +189,7 @@ def main():
             print 'errors found while building the apk'
             return 1
 
-        if opts.buildOnly:
+        if opts.build_only:
             print 'OK'
             return 0
 
