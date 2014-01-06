@@ -73,7 +73,8 @@ def createCmdlineParser():
         '-b', '--build-only',
         dest='buildOnly',
         action='store_true',
-        default=False
+        default=False,
+        help="build the apk without running"
         )
     parser.add_option(
         '-r', '--run',
