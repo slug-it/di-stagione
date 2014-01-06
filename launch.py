@@ -66,7 +66,6 @@ def createCmdlineParser():
     parser = optparse.OptionParser('usage: python %prog [options]')
     parser.add_option(
         '-v', '--verbose',
-        dest='verbose',
         action='store_true',
         default=False,
         help='enable verbose mode')
@@ -78,7 +77,6 @@ def createCmdlineParser():
         )
     parser.add_option(
         '-r', '--run',
-        dest='run',
         action='store_true',
         default=False,
         help='skip the build step and run the app directly'
@@ -91,7 +89,6 @@ def createCmdlineParser():
         )
     parser.add_option(
         '-c', '--clean',
-        dest='clean',
         action='store_true',
         default=False,
         help='clean environment'
