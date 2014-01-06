@@ -4,4 +4,7 @@
     <color name="background_spring_months">#ff99FF99</color>
     <color name="background_summer_months">#ffFFFF99</color>
     <color name="background_autumn_months">#ffFFCC99</color>
+
+    <color name="background_light">#ffFFFFFF</color>
+    <color name="background_dark">#ff000000</color>
 </resources>

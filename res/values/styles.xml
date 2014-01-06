@@ -1,0 +1,18 @@
+<resources>
+    <style name="BaseProducesThemeLight" parent="android:Theme.Light">
+    </style>
+    <style name="ProducesThemeLight" parent="BaseProducesThemeLight">
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:colorBackgroundCacheHint">#00000000</item>
+        <item name="backgroundColor">@color/background_winter_months</item>
+        <item name="sideLength">16dp</item>
+    </style>
+    <style name="BaseProducesThemeDark" parent="android:Theme">
+    </style>
+    <style name="ProducesThemeDark" parent="BaseProducesThemeDark">
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:colorBackgroundCacheHint">#00000000</item>
+        <item name="backgroundColor">@color/background_winter_months</item>
+        <item name="sideLength">16dp</item>
+    </style>
+</resources>
