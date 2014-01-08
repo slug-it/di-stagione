@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Di-stagione by slug-it</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Di-stagione</h1>
+        <p>App per avere a portata di mano frutta e verdura di stagione</p>
+        <p class="view"><a href="https://github.com/slug-it/di-stagione">View the Project on GitHub <small>slug-it/di-stagione</small></a></p>
+        <ul>
+          <li><a href="https://github.com/slug-it/di-stagione/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/slug-it/di-stagione/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/slug-it/di-stagione">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="di-stagione" class="anchor" href="#di-stagione"><span class="octicon octicon-link"></span></a>Di stagione</h1>
+
+<p>App per avere a portata di mano frutta e verdura di stagione, branch di sviluppo per provare scala.</p>
+
+<p>Design in corso, per seguire lo sviluppo: <a href="https://trello.com/board/di-stagione/5150c9051ff9b8d161008df7" title="Trello Board - Di stagione">Trello Board</a></p>
+
+<h1>
+<a name="requirements" class="anchor" href="#requirements"><span class="octicon octicon-link"></span></a>Requirements</h1>
+
+<ul>
+<li><code>export ANDROID_HOME=/opt/adt-bundle-linux/sdk/</code></li>
+<li><code>export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH</code></li>
+<li>Installare <a href="http://www.scala-sbt.org/release/docs/Getting-Started/Setup.html">scala-sbt</a>
+</li>
+<li>
+<code>~$ sbt android:package</code> scarica tutte le dipendenze ed i plugin e genera un file .apk da mandare al telefono/emulatore</li>
+<li>Connettere il telefono e lanciare <code>adb install -r bin/di-stagione-debug.apk</code>
+</li>
+</ul><h1>
+<a name="reference" class="anchor" href="#reference"><span class="octicon octicon-link"></span></a>Reference</h1>
+
+<p>Di solito le liste vengono popolate con dei template presenti nell'sdk:</p>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/3663745/what-is-android-r-layout-simple-list-item-1">http://stackoverflow.com/questions/3663745/what-is-android-r-layout-simple-list-item-1</a></li>
+</ul><p>Per creare dei "componenti" è possibile 1) includere un layout xml 2) estendere una View/Layout:</p>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/2289730/android-layout-is-reusable-component-ui-possible">http://stackoverflow.com/questions/2289730/android-layout-is-reusable-component-ui-possible</a></li>
+<li><a href="http://developer.android.com/guide/topics/ui/custom-components.html">http://developer.android.com/guide/topics/ui/custom-components.html</a></li>
+</ul><p>Esempi dell'SDK tradotti in scala (senza nessuna estensione particolare)</p>
+
+<ul>
+<li><a href="https://github.com/michelou/android-examples/tree/master/android-sdk">https://github.com/michelou/android-examples/tree/master/android-sdk</a></li>
+</ul><p>Temi per widget custom</p>
+
+<ul>
+<li><a href="http://stackoverflow.com/questions/4493947/how-to-define-theme-style-item-for-custom-widget">http://stackoverflow.com/questions/4493947/how-to-define-theme-style-item-for-custom-widget</a></li>
+<li><a href="https://thenewcircle.com/s/post/1444/styles_and_themes">https://thenewcircle.com/s/post/1444/styles_and_themes</a></li>
+</ul>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/slug-it">slug-it</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
