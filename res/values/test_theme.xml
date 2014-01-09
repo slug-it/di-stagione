@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <style name="Theme.DiStagioneAGDefault" parent="android:Theme">
+        <item name="TabBarItemStyle">@style/Widget.BarItem</item>
+    </style>
+
+    <style name="Widget">
+    </style>
+
+    <style name="Widget.BarItem" parent="Widget">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bar_item</item>
+        <item name="android:paddingLeft">15dip</item>
+        <item name="android:paddingRight">15dip</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.BarItem</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="TextAppearance.BarItem" parent="Widget">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/test_color_theme</item>
+    </style>
+</resources>

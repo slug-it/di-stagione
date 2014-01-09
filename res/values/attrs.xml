@@ -4,4 +4,6 @@
         <attr name="backgroundColor" format="color" />
         <attr name="sideLength" format="dimension" />
     </declare-styleable>
+
+    <attr name="TabBarItemStyle" format="reference" />
 </resources>

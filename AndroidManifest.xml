@@ -22,8 +22,10 @@
                   android:label="@string/item_detail_activity_name" >
         </activity>
 
-        <activity android:name="MonthDetailActivity"
-                  android:label="@string/month_detail_activity_name" >
+        <activity
+            android:name="MonthDetailActivity"
+            android:label="@string/month_detail_activity_name"
+            android:theme="@style/Theme.DiStagioneAGDefault">
         </activity>
 
     </application>

@@ -4,7 +4,7 @@ import android.content.Context
 import android.widget.TextView
 
 
-class TabBarItem(ctxt: Context) extends TextView(ctxt)
+class TabBarItem(ctxt: Context) extends TextView(ctxt, null, R.attr.TabBarItemStyle)
 {
 
 }
