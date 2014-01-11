@@ -6,6 +6,7 @@ import android.view.ViewGroup.LayoutParams
 import android.view.View.MeasureSpec
 import android.widget.HorizontalScrollView
 import android.widget.LinearLayout
+import android.widget.TextView
 import android.content.Context
 
 
@@ -130,4 +131,10 @@ class TabBar(ctxt: Context, as: AttributeSet)
         }
     }
     /* --------------------------------------------------------------------- */
+}
+
+class TabBarItem(ctxt: Context)
+    extends TextView(ctxt, null, R.attr.TabBarItemStyle)
+{
+
 }

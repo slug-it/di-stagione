@@ -3,6 +3,7 @@ package it.slug.distagione
 import android.os.Bundle
 import android.support.v4.app.FragmentActivity
 import android.support.v4.app.FragmentManager
+import android.view.Window
 
 
 class MonthDetailActivity extends FragmentActivity with TypedViewHolder
@@ -14,6 +15,7 @@ class MonthDetailActivity extends FragmentActivity with TypedViewHolder
     /* ------------ protected members -------------------------------------- */
     override def onCreate(savedInstanceState: Bundle) : Unit = {
         super.onCreate(savedInstanceState)
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(R.layout.month_detail)
 
         // widgets
