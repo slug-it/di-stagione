@@ -15,12 +15,13 @@ class TabBar(ctxt: Context, as: AttributeSet)
 {
     /* ------------ ctor --------------------------------------------------- */
     // view variables
-    var mLayout = new LinearLayout(ctxt)
+    private var mLayout = new LinearLayout(ctxt)
 
-    // control variables
-    var mMaxTabWidth = -1           // max width for a single tab
-    var mSelectedIndex = -1         // index of selected tab
-    var mAnimation: Runnable = null // handler to the current animation
+    // support variables
+    private var mMaxTabWidth = -1           // max width for a single tab
+    private var mSelectedIndex = -1         // index of selected tab
+    private var mAnimation: Runnable = null // handler to the current animation
+    private var entries: Map[CharSequence, TextView] = Map()  // entries map
 
     // initializations
     setHorizontalScrollBarEnabled(false)
@@ -38,6 +39,7 @@ class TabBar(ctxt: Context, as: AttributeSet)
         val newItem = new TabBarItem(getContext())
         newItem.setFocusable(true)
         newItem.setText(text)
+        entries += (text -> newItem)
         mLayout.addView(
             newItem,
             new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT, 1)
@@ -59,6 +61,8 @@ class TabBar(ctxt: Context, as: AttributeSet)
         createAnimation(index)
         runAnimation()
     }
+
+    def item(name: CharSequence): Option[TextView] = entries.get(name)
     /* --------------------------------------------------------------------- */
 
     /* ------------ events overriding -------------------------------------- */
