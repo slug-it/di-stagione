@@ -18,29 +18,31 @@ class MonthDetailPagerController(
 {
     /* ------------ ctor --------------------------------------------------- */
     // model vars
-    val mModel = ModelState
-    val mActivity = parentActivity
+    private val mModel = ModelState
+    private val mActivity = parentActivity
 
     // view vars
-    val mView = ViewState
-    val mPager = pager
+    private val mView = ViewState
+    private val mPager = pager
 
     // controller vars
-    var mCurrentPage = -1
+    private var mCurrentPage = -1
 
     // connections
     mView.addListener(this)
 
     // initializations
-    val fragManager = mActivity.getSupportFragmentManager()
+    private val fragManager = mActivity.getSupportFragmentManager()
     mPager.setOnPageChangeListener(new MonthDetailPagerListener())
     mPager.setAdapter(new MonthDetailPagerAdapter(fragManager))
+    onCurrentMonthChange(mView.currentMonth)
     /* --------------------------------------------------------------------- */
 
     /* ------------ model handlers ----------------------------------------- */
     def onCurrentMonthChange(newMonth: Int): Unit = {
         if (mCurrentPage == newMonth) return
-        Log.i("Distagione", "New Month " + newMonth)
+        mCurrentPage = newMonth
+        mPager.setCurrentItem(mCurrentPage)
     }
     /* --------------------------------------------------------------------- */
 

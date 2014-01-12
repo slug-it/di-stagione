@@ -35,7 +35,7 @@ class TabBar(ctxt: Context, as: AttributeSet)
     /* --------------------------------------------------------------------- */
 
     /* ------------ public members ----------------------------------------- */
-    def addTab(text: CharSequence): Unit = {
+    def addTab(text: CharSequence): TabBarItem = {
         val newItem = new TabBarItem(getContext())
         newItem.setFocusable(true)
         newItem.setText(text)
@@ -44,7 +44,10 @@ class TabBar(ctxt: Context, as: AttributeSet)
             newItem,
             new LinearLayout.LayoutParams(0, LayoutParams.MATCH_PARENT, 1)
             )
+        newItem
     }
+
+    def selectedIndex = mSelectedIndex
 
     def setCurrentItem(index: Int): Unit = {
         // preliminary checks
@@ -78,7 +81,6 @@ class TabBar(ctxt: Context, as: AttributeSet)
         val childCount = mLayout.getChildCount()
         val expansionLocked = (widthMode == MeasureSpec.EXACTLY)
 
-        // if
         setFillViewport(expansionLocked)
 
         if (childCount > 1 &&
@@ -97,8 +99,6 @@ class TabBar(ctxt: Context, as: AttributeSet)
         var oldWidth = getMeasuredWidth()
         super.onMeasure(widthSpec, heightSpec)
         var newWidth = getMeasuredWidth()
-
-        // if (oldWidth != newWidth) setCurrentItem(mSelectedIndex)
     }
 
     override def onAttachedToWindow(): Unit = {
