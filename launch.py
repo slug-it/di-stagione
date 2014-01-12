@@ -186,6 +186,8 @@ def main():
         print 'building apk..'
         cmd = ['sbt', 'android:package']
         if subprocess.call(cmd, **cmdopts) != 0:
+            # remove pending adb process
+            subprocess.call(['killall', 'adb'])
             print 'errors found while building the apk'
             return 1
 
