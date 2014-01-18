@@ -3,6 +3,10 @@
     <string name="app_name">Di Stagione</string>
     <string name="item_detail_activity_name">Dettaglio Item</string>
     <string name="month_detail_activity_name">Dettaglio Mese</string>
+    <string name="test_detail">Dettaglio Item</string>
+    <string name="test_month_detail">Dettaglio Mese</string>
+
+    <!-- months -->
     <string name="jan">G</string>
     <string name="feb">F</string>
     <string name="mar">M</string>
@@ -27,6 +31,46 @@
     <string name="oct_ext">Ottobre</string>
     <string name="nov_ext">Novembre</string>
     <string name="dec_ext">Dicembre</string>
-    <string name="test_detail">Dettaglio Item</string>
-    <string name="test_month_detail">Dettaglio Mese</string>
+
+    <!-- fruit -->
+    <string name="fr_kiwi">kiwi</string>
+    <string name="fr_orange">orange</string>
+    <string name="fr_tangerine">tangerine</string>      <!-- mandarino -->
+    <string name="fr_clementine">clementine</string>    <!-- mandarancio -->
+    <string name="fr_lemon">lemon</string>
+    <string name="fr_grapefruit">grapefruit</string>    <!-- pompelmo -->
+    <string name="fr_apple">apple</string>
+    <string name="fr_pear">pear</string>
+    <string name="fr_dried_fruit">dried fruit</string>
+    <string name="fr_cedar">cedar</string>
+    <string name="fr_strawberry">strawberry</string>
+    <string name="fr_cherry">cherry</string>
+    <string name="fr_japanese_medlar">japanese medlar</string>
+    <string name="fr_apricoc">apricot</string>  <!-- albicocca -->
+    <string name="fr_black_cherry">black cherry</string>    <!-- amarena -->
+    <string name="fr_melon">melon</string>
+    <string name="fr_blackberry">blackberry</string>   <!-- mora -->
+    <string name="fr_prune">prune</string>   <!-- prugna -->
+    <string name="fr_peach">peach</string>     <!-- pesca -->
+    <string name="fr_nectarine">nectarine</string>     <!-- pesca noce -->
+    <string name="fr_raspberry">raspberry</string>     <!-- lampone -->
+    <string name="fr_currant">currant</string>     <!-- ribes -->
+    <string name="fr_gooseberry">gooseberry</string>   <!-- uva spina -->
+    <string name="fr_watermelon">watermelon</string>   <!-- anguria -->
+    <string name="fr_carnelian">carnelian</string>     <!-- corniola -->
+    <string name="fr_fig">fig</string>  <!-- fico -->
+    <string name="fr_prickly_pear">prickly pear</string> <!-- fico d'india -->
+    <string name="fr_blueberry">blueberry</string>  <!-- mirtillo -->
+    <string name="fr_grapes">grapes</string>    <!-- uva -->
+    <string name="fr_persimmon">persimmon</string>  <!-- caco -->
+    <string name="fr_chestnut">chestnut</string>    <!-- castagna -->
+    <string name="fr_pomegranate">pomegranate</string>  <!-- melagrana -->
+    <string name="fr_plum">plum</string>    <!-- susina -->
+    <string name="fr_pineapple">pineapple</string>  <!-- ananas -->
+    <string name="fr_winter_cherry">winter cherry</string> <!-- alchechengi -->
+    <string name="fr_banana">banana</string>
+    <string name="fr_carob">carob</string>  <!-- carruba -->
+    <string name="fr_rowan">rowan</string>  <!-- sorba -->
+    <string name="fr_arbutus">arbutus</string>  <!-- corbezzolo -->
+
 </resources>
