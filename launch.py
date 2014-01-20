@@ -37,13 +37,17 @@ import os
 import optparse
 import subprocess
 import signal
-
+import logging
 
 # script directory
 my_dir = os.path.dirname(os.path.realpath(__file__))
 
 # command-line options
 opts = None
+
+# base logger
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("launch")
 
 def which(name, flags=os.X_OK):
     """Search PATH for executable with the given name."""
@@ -101,7 +105,7 @@ def loadConfigurationFile():
     # check that configuration file exist
     if not os.path.isfile(cfgfile):
         if opts.verbose:
-            print 'launch configuration file (launch.cfg) not found'
+            logger.debug('launch configuration file (launch.cfg) not found')
         return {}
     # if so, read it
     d = {}
@@ -109,7 +113,7 @@ def loadConfigurationFile():
     if 'cfg' in d:
         return d['cfg']
     else:
-        print '(warning) "cfg" dict not found in launch.cfg file'
+        logger.warn('"cfg" dict not found in launch.cfg file')
         return {}
 
 def main():
@@ -118,13 +122,16 @@ def main():
     parser = createCmdlineParser()
     (opts, args) = parser.parse_args()
 
-    print 'loading launch configuration..'
+    if opts.verbose:
+        logger.setLevel(logging.DEBUG)
+
+    logger.info('loading launch configuration..')
     launchCfg = loadConfigurationFile()
 
     # check that sbt is in path
-    print 'preparing environment..'
+    logger.info('preparing environment..')
     if len(which('sbt')) <= 0:
-        print 'sbt command not found'
+        logger.error('sbt command not found')
         return 1
 
     # check android environment
@@ -136,8 +143,7 @@ def main():
         androidHome = launchCfg.get('ANDROID_HOME')
         if androidHome == None:
             # if ANDROID_HOME is not found in the configuration file we give up
-            print 'ANDROID_HOME not found'
-            print 'you can set it in the launch.cfg file'
+            logger.info('ANDROID_HOME not found: you can set it in the launch.cfg file')
             return 1
 
         # update environment
@@ -149,12 +155,11 @@ def main():
             platformToolsDir,
             envcopy['PATH']])
     else:
-        # if ANDROID_HOME is set we assume that android environment is
-        # correctly set up
+        logger.debug("if ANDROID_HOME is set we assume that android environment is correctly set up")
         pass
 
     if not opts.build_only:
-        print 'checking device availability..'
+        logger.info('checking device availability..')
         p = subprocess.Popen(
                 ['adb', 'devices'],
                 env=envcopy,
@@ -168,7 +173,7 @@ def main():
                 devicePresent = True
                 break
         if not devicePresent:
-            print 'no device found - hurry up and connect your phone!'
+            logger.warn('no device found - hurry up and connect your phone!')
             return 1
 
     # prepares the command options
@@ -177,38 +182,38 @@ def main():
         cmdopts.update({'stdout': subprocess.PIPE, 'stderr':subprocess.PIPE})
 
     if opts.clean:
-        print 'cleaning scala environment..'
+        logger.info('cleaning scala environment..')
         # the standard "sbt clean" does not remove all sbt artifacts
         # so we perform a deeper clean with find command
         os.system('find . -name target -type d -exec rm -rf {} \; -prune')
 
     if not opts.run:
-        print 'building apk..'
+        logger.info('building apk..')
         cmd = ['sbt', 'android:package']
         if subprocess.call(cmd, **cmdopts) != 0:
             # remove pending adb process
             subprocess.call(['killall', 'adb'])
-            print 'errors found while building the apk'
+            logger.error('errors found while building the apk')
             return 1
 
         if opts.build_only:
-            print 'OK'
+            logger.info('OK')
             return 0
 
-        print 'installing apk..'
+        logger.info('installing apk..')
         apkfile = os.path.join('bin', 'di-stagione-debug.apk')
         cmd = ['adb', 'install', '-r', apkfile]
         if subprocess.call(cmd, **cmdopts) != 0:
-            print 'error while installing apk..'
+            logger.error('error while installing apk..')
             return 1
 
-    print 'launching app..'
+    logger.info('launching app..')
     packageName = '.'.join(['it', 'slug', 'distagione'])
     activityName = '.'.join([packageName, 'ListaDiStagione'])
     activityCompleteName = '/'.join([packageName, activityName])
     cmd = ['adb', 'shell', 'am', 'start', '-n', activityCompleteName]
     if subprocess.call(cmd, **cmdopts) != 0:
-        print 'error while launching app..'
+        logger.error('error while launching app..')
         return 1
 
     if opts.logcat != None:
@@ -222,7 +227,7 @@ def main():
             cmd = ['logcat-color', '*:' + opts.logcat]
         subprocess.call(cmd, env=envcopy)
 
-    print 'Done!'
+    logger.info('Done!')
     return 0
 
 if __name__ == '__main__':
