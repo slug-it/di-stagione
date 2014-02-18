@@ -186,6 +186,7 @@ def main():
         # the standard "sbt clean" does not remove all sbt artifacts
         # so we perform a deeper clean with find command
         os.system('find . -name target -type d -exec rm -rf {} \; -prune')
+        os.system('find . -name bin -type d -exec rm -rf {} \; -prune')
 
     if not opts.run:
         logger.info('building apk..')
