@@ -14,9 +14,10 @@ class ItemDetailActivity extends Activity with TypedViewHolder {
         findView(TR.item_name).setText("Nome Item")
         findView(TR.item_img).setImageResource(R.drawable.strawberry)
         findView(TR.item_desc).setText(
-            "Lorem ipsum dolor sit amet, consectetur " + 
+            "Lorem ipsum dolor sit amet, consectetur " +
             "adipiscing elit. Phasellus scelerisque ligula " +
             "malesuada, hendrerit nisl pellentesque, dictum dui" +
             " Ut eget elit nec ligula scelerisque porttitor.")
     }
 }
+
