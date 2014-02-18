@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="background_winter_months">#ffCCFFFF</color>
-    <color name="background_spring_months">#ff99FF99</color>
-    <color name="background_summer_months">#ffFFFF99</color>
-    <color name="background_autumn_months">#ffFFCC99</color>
+    <color name="background_winter_months_selected">#ffCCFFFF</color>
+    <color name="background_spring_months_selected">#ff99FF99</color>
+    <color name="background_summer_months_selected">#ffFFFF99</color>
+    <color name="background_autumn_months_selected">#ffFFCC99</color>
+
+    <color name="background_winter_months_unselected">#ffAAFFFF</color>
+    <color name="background_spring_months_unselected">#ff66FF66</color>
+    <color name="background_summer_months_unselected">#ffFFFF66</color>
+    <color name="background_autumn_months_unselected">#ffFFAA66</color>
 
     <color name="background_light">#ffFFFFFF</color>
     <color name="background_dark">#ff000000</color>
