@@ -18,7 +18,6 @@ class MonthDetailPagerController(
 {
     /* ------------ ctor --------------------------------------------------- */
     // model vars
-    private val mModel = ModelState
     private val mActivity = parentActivity
 
     // view vars
@@ -68,17 +67,18 @@ class MonthDetailPagerController(
     class MonthDetailPagerAdapter(val fm: FragmentManager)
         extends FragmentPagerAdapter(fm)
     {
-        val mMonths = mModel.monthNames()
+        val res = mActivity.getResources()
+        val mMonths = res.getStringArray(R.array.months_ext)
 
         // return the number of pages (i.e. the number of months)
         override def getCount(): Int = mMonths.length
 
         override def getPageTitle(position: Int): CharSequence = {
-            mActivity.getString(mMonths(position))
+            mMonths(position)
         }
 
         override def getItem(position: Int): Fragment = {
-            new MonthDetailPageFragment(mActivity.getString(mMonths(position)))
+            new MonthDetailPageFragment(mMonths(position))
         }
     }
     /* --------------------------------------------------------------------- */

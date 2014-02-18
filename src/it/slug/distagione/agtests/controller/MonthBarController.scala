@@ -10,16 +10,18 @@ class MonthBarController(val barWidget: TabBar, val ctxt: Context)
     extends ViewStateListener
 {
     /* ------------ ctor --------------------------------------------------- */
-    private val mModel = ModelState
     private val mCtxt = ctxt
 
     private val mView = ViewState
     private val mBar = barWidget
 
+    val res = ctxt.getResources()
+    val mMonths = res.getStringArray(R.array.months_short)
+
     mView.addListener(this)
 
-    for ((x, i) <- mModel.monthNames().zipWithIndex) {
-        val newItem = mBar.addTab(mCtxt.getString(x))
+    for ((x, i) <- mMonths.zipWithIndex) {
+        val newItem = mBar.addTab(x)
         newItem.setOnClickListener(new ItemClickListener(i))
     }
     mBar.setCurrentItem(mView.currentMonth)

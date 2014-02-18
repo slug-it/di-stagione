@@ -20,8 +20,6 @@ class ListaDiStagione extends Activity with TypedViewHolder {
   lazy val tf_title = Typeface.createFromAsset(getAssets, "fonts/OverlockSC-Regular.ttf")
   lazy val tf_element = Typeface.createFromAsset(getAssets, "fonts/SortsMillGoudy-Regular.ttf")
 
-  val testSingleton = ModelState
-
   override def onCreate(saved: Bundle) : Unit = {
     super.onCreate(saved)
     setContentView(R.layout.main)

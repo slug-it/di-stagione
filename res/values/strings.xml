@@ -7,30 +7,34 @@
     <string name="test_month_detail">Dettaglio Mese</string>
 
     <!-- months -->
-    <string name="jan">G</string>
-    <string name="feb">F</string>
-    <string name="mar">M</string>
-    <string name="apr">A</string>
-    <string name="may">M</string>
-    <string name="jun">G</string>
-    <string name="jul">L</string>
-    <string name="aug">A</string>
-    <string name="sep">S</string>
-    <string name="oct">O</string>
-    <string name="nov">N</string>
-    <string name="dec">D</string>
-    <string name="jan_ext">Gennaio</string>
-    <string name="feb_ext">Febbraio</string>
-    <string name="mar_ext">Marzo</string>
-    <string name="apr_ext">Aprile</string>
-    <string name="may_ext">Maggio</string>
-    <string name="jun_ext">Giugno</string>
-    <string name="jul_ext">Luglio</string>
-    <string name="aug_ext">Agosto</string>
-    <string name="sep_ext">Settembre</string>
-    <string name="oct_ext">Ottobre</string>
-    <string name="nov_ext">Novembre</string>
-    <string name="dec_ext">Dicembre</string>
+    <string-array name="months_short">
+        <item>G</item>
+        <item>F</item>
+        <item>M</item>
+        <item>A</item>
+        <item>M</item>
+        <item>G</item>
+        <item>L</item>
+        <item>A</item>
+        <item>S</item>
+        <item>O</item>
+        <item>N</item>
+        <item>D</item>
+    </string-array>
+    <string-array name="months_ext">
+        <item>Gennaio</item>
+        <item>Febbraio</item>
+        <item>Marzo</item>
+        <item>Aprile</item>
+        <item>Maggio</item>
+        <item>Giugno</item>
+        <item>Luglio</item>
+        <item>Agosto</item>
+        <item>Settembre</item>
+        <item>Ottobre</item>
+        <item>Novembre</item>
+        <item>Dicembre</item>
+    </string-array>
 
     <!-- fruit -->
     <string name="fr_kiwi">kiwi</string>
