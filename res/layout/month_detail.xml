@@ -4,15 +4,15 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >
-    <it.slug.distagione.TabBar
-            android:id="@+id/month_bar"
-            android:textSize="32dp"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
     <android.support.v4.view.ViewPager
             android:id="@+id/month_pager"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             />
+    <it.slug.distagione.TabBar
+            android:id="@+id/month_bar"
+            android:textSize="32dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
 </LinearLayout>

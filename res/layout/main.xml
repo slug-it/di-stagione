@@ -11,12 +11,7 @@
             android:background="@android:drawable/title_bar"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content" />
-    <ListView
-            android:id="@+id/list"
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-    <include layout="@layout/month_bar" />
+    <include layout="@layout/month_detail" />
 </LinearLayout>
 
 
