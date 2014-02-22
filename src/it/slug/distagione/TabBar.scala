@@ -35,8 +35,8 @@ class TabBar(ctxt: Context, as: AttributeSet)
     /* --------------------------------------------------------------------- */
 
     /* ------------ public members ----------------------------------------- */
-    def addTab(text: CharSequence): TabBarItem = {
-        val newItem = new TabBarItem(getContext())
+    def addTab(text: CharSequence, style: Int): TabBarItem = {
+        val newItem = new TabBarItem(getContext(), style)
         newItem.setFocusable(true)
         newItem.setText(text)
         entries += (text -> newItem)
@@ -137,8 +137,8 @@ class TabBar(ctxt: Context, as: AttributeSet)
     /* --------------------------------------------------------------------- */
 }
 
-class TabBarItem(ctxt: Context)
-    extends TextView(ctxt, null, R.attr.TabBarItemStyle)
+class TabBarItem(ctxt: Context, style: Int)
+    extends TextView(ctxt, null, style)
 {
 
 }

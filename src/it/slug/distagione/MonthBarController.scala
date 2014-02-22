@@ -20,8 +20,23 @@ class MonthBarController(val barWidget: TabBar, val ctxt: Context)
 
     mView.addListener(this)
 
+    private val monthStyles = Array(
+        R.attr.TabBarItemWinterStyle,   // january
+        R.attr.TabBarItemWinterStyle,   // february
+        R.attr.TabBarItemSpringStyle,   // march
+        R.attr.TabBarItemSpringStyle,   // april
+        R.attr.TabBarItemSpringStyle,   // may
+        R.attr.TabBarItemSummerStyle,   // june
+        R.attr.TabBarItemSummerStyle,   // july
+        R.attr.TabBarItemSummerStyle,   // august
+        R.attr.TabBarItemAutumnStyle,   // september
+        R.attr.TabBarItemAutumnStyle,   // october
+        R.attr.TabBarItemAutumnStyle,   // november
+        R.attr.TabBarItemWinterStyle
+        )
+
     for ((x, i) <- mMonths.zipWithIndex) {
-        val newItem = mBar.addTab(x)
+        val newItem = mBar.addTab(x, monthStyles(i))
         newItem.setOnClickListener(new ItemClickListener(i))
     }
     mBar.setCurrentItem(mView.currentMonth)

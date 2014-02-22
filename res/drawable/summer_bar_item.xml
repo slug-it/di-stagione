@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- *** Not-Pressed States *** -->
+    <!-- Not-Focused States -->
+    <item
+        android:state_focused="false"
+        android:state_selected="false"
+        android:state_pressed="false"
+        android:drawable="@color/background_summer_months_unselected"
+        />
+
+    <item
+        android:state_focused="false"
+        android:state_selected="true"
+        android:state_pressed="false"
+        android:drawable="@color/background_summer_months_selected"
+        />
+
+    <!-- Focused States -->
+    <item
+        android:state_focused="true"
+        android:state_selected="false"
+        android:state_pressed="false"
+        android:drawable="@color/background_summer_months_unselected"
+        />
+
+    <item
+        android:state_focused="true"
+        android:state_selected="true"
+        android:state_pressed="false"
+        android:drawable="@color/background_summer_months_selected"
+        />
+
+    <!-- *** Pressed States *** -->
+    <!-- Not-Focused States -->
+    <item
+        android:state_focused="false"
+        android:state_selected="false"
+        android:state_pressed="true"
+        android:drawable="@color/background_summer_months_unselected"
+        />
+
+    <item
+        android:state_focused="false"
+        android:state_selected="true"
+        android:state_pressed="true"
+        android:drawable="@color/background_summer_months_selected"
+        />
+
+    <!-- Focused States -->
+    <item
+        android:state_focused="true"
+        android:state_selected="false"
+        android:state_pressed="true"
+        android:drawable="@color/background_summer_months_unselected"
+        />
+
+    <item
+        android:state_focused="true"
+        android:state_selected="true"
+        android:state_pressed="true"
+        android:drawable="@color/background_summer_months_selected"
+        />
+
+</selector>

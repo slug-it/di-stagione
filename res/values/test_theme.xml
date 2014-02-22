@@ -2,15 +2,54 @@
 
 <resources>
     <style name="Theme.DiStagioneAGDefault" parent="android:Theme">
-        <item name="TabBarItemStyle">@style/Widget.BarItem</item>
+        <item name="TabBarItemAutumnStyle">@style/Widget.AutumnBarItem</item>
+        <item name="TabBarItemWinterStyle">@style/Widget.WinterBarItem</item>
+        <item name="TabBarItemSpringStyle">@style/Widget.SpringBarItem</item>
+        <item name="TabBarItemSummerStyle">@style/Widget.SummerBarItem</item>
     </style>
 
     <style name="Widget">
     </style>
 
-    <style name="Widget.BarItem" parent="Widget">
+    <style name="Widget.AutumnBarItem" parent="Widget">
         <item name="android:gravity">center</item>
-        <item name="android:background">@drawable/bar_item</item>
+        <item name="android:background">@drawable/autumn_bar_item</item>
+        <item name="android:paddingLeft">15dip</item>
+        <item name="android:paddingRight">15dip</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.BarItem</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="Widget.WinterBarItem" parent="Widget">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/winter_bar_item</item>
+        <item name="android:paddingLeft">15dip</item>
+        <item name="android:paddingRight">15dip</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.BarItem</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="Widget.SpringBarItem" parent="Widget">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/spring_bar_item</item>
+        <item name="android:paddingLeft">15dip</item>
+        <item name="android:paddingRight">15dip</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.BarItem</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="Widget.SummerBarItem" parent="Widget">
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/summer_bar_item</item>
         <item name="android:paddingLeft">15dip</item>
         <item name="android:paddingRight">15dip</item>
         <item name="android:paddingTop">12dp</item>
@@ -22,6 +61,6 @@
 
     <style name="TextAppearance.BarItem" parent="Widget">
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/test_color_theme</item>
+        <item name="android:textColor">@color/bar_item_foreground</item>
     </style>
 </resources>

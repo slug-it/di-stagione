@@ -14,4 +14,6 @@
 
     <color name="background_light">#ffFFFFFF</color>
     <color name="background_dark">#ff000000</color>
+
+    <color name="bar_item_foreground">#ff000000</color>
 </resources>
