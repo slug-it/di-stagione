@@ -12,13 +12,13 @@ import android.content.Context
 
 class MonthDetailPagerController(
     val pager: ViewPager,
-    val parentActivity: MonthDetailActivity
+    val ctxt: FragmentActivity
     )
     extends ViewStateListener
 {
     /* ------------ ctor --------------------------------------------------- */
     // model vars
-    private val mActivity = parentActivity
+    private val mCtxt = ctxt
 
     // view vars
     private val mView = ViewState
@@ -31,7 +31,7 @@ class MonthDetailPagerController(
     mView.addListener(this)
 
     // initializations
-    private val fragManager = mActivity.getSupportFragmentManager()
+    private val fragManager = mCtxt.getSupportFragmentManager()
     mPager.setOnPageChangeListener(new MonthDetailPagerListener())
     mPager.setAdapter(new MonthDetailPagerAdapter(fragManager))
     onCurrentMonthChange(mView.currentMonth)
@@ -67,7 +67,7 @@ class MonthDetailPagerController(
     class MonthDetailPagerAdapter(val fm: FragmentManager)
         extends FragmentPagerAdapter(fm)
     {
-        val res = mActivity.getResources()
+        val res = mCtxt.getResources()
         val mMonths = res.getStringArray(R.array.months_ext)
 
         // return the number of pages (i.e. the number of months)
