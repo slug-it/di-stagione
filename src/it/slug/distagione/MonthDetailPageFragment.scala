@@ -22,7 +22,7 @@ class MonthDetailPageFragment(val fixedContent: String) extends Fragment {
     /* --------------------------------------------------------------------- */
 
     /* ------------ protected members -------------------------------------- */
-    override def onCreate(savedState: Bundle) : Unit = 
+    override def onCreate(savedState: Bundle) : Unit =
     {
         super.onCreate(savedState)
         if (savedState != null && savedState.containsKey(_myKey)) {
@@ -35,27 +35,29 @@ class MonthDetailPageFragment(val fixedContent: String) extends Fragment {
         }
     }
 
-    override def onSaveInstanceState(outState: Bundle) : Unit = 
+    override def onSaveInstanceState(outState: Bundle) : Unit =
     {
         super.onSaveInstanceState(outState)
         outState.putString(_myKey, _fixedContent)
     }
 
     override def onCreateView(
-        inflater: LayoutInflater, 
-        container: ViewGroup, 
+        inflater: LayoutInflater,
+        container: ViewGroup,
         savedState: Bundle
-        ) : View = 
+        ) : View =
     {
-        var text = new TextView(getActivity());
+        val activity = getActivity()
+        val text = new TextView(activity);
+        text.setTypeface(activity.tf_element)
         text.setGravity(Gravity.CENTER);
         text.setText(_fixedContent);
         text.setTextSize(20 * getResources().getDisplayMetrics().density);
         text.setPadding(20, 20, 20, 20);
-        var layout = new LinearLayout(getActivity());
+        val layout = new LinearLayout(getActivity());
         layout.setLayoutParams(
             new LayoutParams(
-                LayoutParams.FILL_PARENT, 
+                LayoutParams.FILL_PARENT,
                 LayoutParams.FILL_PARENT
                 )
             );
