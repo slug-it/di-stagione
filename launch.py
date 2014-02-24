@@ -52,7 +52,8 @@ logger = logging.getLogger("launch")
 def which(name, flags=os.X_OK):
     """Search PATH for executable with the given name."""
     result = []
-    exts = filter(None, os.environ.get('PATHEXT', '').split(os.pathsep))
+    exts = [p for p in os.environ.get('PATHEXT', '').split(os.pathsep) if p]
+
     path = os.environ.get('PATH', None)
     if path is None:
         return []
@@ -109,7 +110,7 @@ def loadConfigurationFile():
         return {}
     # if so, read it
     d = {}
-    execfile(cfgfile, d)
+    exec(open(cfgfile).read(), d)
     if 'cfg' in d:
         return d['cfg']
     else:
@@ -165,7 +166,7 @@ def main():
                 env=envcopy,
                 stdout=subprocess.PIPE
                 )
-        devicesOutput = p.communicate()[0]
+        devicesOutput = p.communicate()[0].decode("utf8")
         devicesLines = devicesOutput.split('\n')
         devicePresent = False
         for line in devicesLines[1:]:
@@ -220,7 +221,7 @@ def main():
     if opts.logcat != None:
         subprocess.call(['adb', 'logcat', '-c'], env=envcopy)
         def sighndl(s, f):
-            print ''
+            print('')
             return
         signal.signal(signal.SIGINT, sighndl)
         cmd = ['adb', 'logcat']
