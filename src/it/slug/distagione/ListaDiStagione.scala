@@ -59,12 +59,3 @@ class ListaDiStagione extends FragmentActivity with TypedViewHolder {
         }
     }
 }
-
-class SquareButton(context: Context, attrs: AttributeSet)
-        extends Button(context, attrs) {
-    override def onMeasure(width: Int, height: Int) {
-        super.onMeasure(width, height)
-        val side = List(getMeasuredWidth, getMeasuredHeight).min
-        setMeasuredDimension(side, side)
-    }
-}
