@@ -27,7 +27,7 @@ def get_localized_months(lang):
           'es': ('es_ES', 'UTF-8'),
           }
     with calendar.different_locale(lc[lang]):
-        return [calendar.month_name[i].title() for i in range(1, 13)]
+        return {calendar.month_name[i].title(): i for i in range(1, 13)}
 
 def transpose(adict):
     tr = defaultdict(list)
@@ -41,9 +41,12 @@ def transpose(adict):
 def run(args):
     source = yaml.load(args.source)
     tr = transpose(source)
+    localized_months = get_localized_months(args.lang)
     res = []
-    for month in get_localized_months(args.lang):
-        res += [{"month": month, "produce": sorted(tr[month], key=lambda d: d['name'])}]
+    for name in localized_months:
+        res += [{"name": name,
+                 "month": localized_months[name],
+                 "produces": sorted(tr[name], key=lambda d: d['name'])}]
     yaml.dump(res, args.output)
 
 if __name__ == "__main__":

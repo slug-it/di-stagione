@@ -21,8 +21,6 @@ def generate_months(produce_by_month):
     env = Environment(loader=FileSystemLoader('./templates'))
     template = env.get_template('produces.xml')
 
-    months = {month_data['month']: [p['name'] for p in month_data['produce']] for month_data in produce_by_month}
-
     with open('./res/values/produces.xml'.format(**locals()), 'w+') as res_month:
         res_month.write(template.render(**locals()))
     logger.info('{res_month.name} generated!'.format(**locals()))
