@@ -6,7 +6,7 @@ data/it/produce-by-name.yaml: data/it/fruits.yaml data/it/vegetables.yaml
 data/it/produce-by-month.yaml: data/it/produce-by-name.yaml
 	./transpose.py $? $@
 
-res/values/produces.xml: data/it/produce-by-month.yaml
+res/values/produces.xml: data/it/produce-by-month.yaml templates/produces.xml
 	./res_generator.py months
 
 clean:
