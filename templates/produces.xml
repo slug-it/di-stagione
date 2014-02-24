@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- List of produces by month -->
+{% for month in months %}
+    <string-array name="{{month}}">
+    {% for prod in months[month] %}
+        <item>{{prod}}</item>
+    {%- endfor -%}
+    </string-array>
+{% endfor %}
+<!-- List of months by produce
+{% for produce in produces %}
+    <string-array name="{{produce.key}}">
+    {% for month in produce.months %}
+        <item>{{month}}</item>
+    {%- endfor -%}
+    </string-array>
+{% endfor %}
+-->
+</resources>
