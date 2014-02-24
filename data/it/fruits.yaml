@@ -1,50 +1,50 @@
 Albicocche:
-    months: [Maggio, Giugno, Luglio, Agosto]
+    months: [5, 6, 7, 8]
 Amarene:
-    months: [Giugno, Luglio]
+    months: [6, 7]
 Anguria:
     other-names: [Cocomero]
-    months: [Giugno, Luglio, Agosto]
+    months: [6, 7, 8]
 Arance:
-    months: [Gennaio, Febbraio, Marzo, Aprile, Novembre, Dicembre]
+    months: [1, 2, 3, 4, 11, 12]
 Cachi:
-    months: [Ottobre, Novembre, Dicembre, Gennaio]
+    months: [10, 11, 12, 1]
     other-names: [Kaki]
 Ciliegie:
-    months: [Maggio, Giugno, Luglio]
+    months: [5, 6, 7]
 Clementine:
-    months: [Ottobre, Novembre, Dicembre, Gennaio, Febbraio]
+    months: [10, 11, 12, 1, 2]
 Fragole:
-    months: [Aprile, Maggio, Giugno, Luglio]
+    months: [4, 5, 6, 7]
 Kiwi:
-    months: [Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile, Maggio]
+    months: [11, 12, 1, 2, 3, 4, 5]
 Lamponi:
-    months: [Maggio, Giugno, Luglio, Agosto, Settembre, Ottobre]
+    months: [5, 6, 7, 8, 9, 10]
 Limoni:
-    months: [Ottobre, Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile]
+    months: [10, 11, 12, 1, 2, 3, 4]
 Fichi:
-    months: [Giugno, Luglio, Agosto, Settembre]
+    months: [6, 7, 8, 9]
 Mandarini:
-    months: [Dicembre, Gennaio, Febbraio]
+    months: [12, 1, 2]
 Mele:
-    months: [Agosto, Settembre, Ottobre, Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile, Maggio]
+    months: [8, 9, 10, 11, 12, 1, 2, 3, 4, 5]
 Meloni:
-    months: [Maggio, Giugno, Luglio, Agosto, Settembre]
+    months: [5, 6, 7, 8, 9]
     other-names: [Poponi]
 Mirtilli:
-    months: [Luglio, Agosto, Settembre]
+    months: [7, 8, 9]
 Nespole:
-    months: [Aprile, Maggio]
+    months: [4, 5]
 Pere:
-    months: [Agosto, Settembre, Ottobre, Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile, Maggio]
+    months: [8, 9, 10, 11, 12, 1, 2, 3, 4, 5]
 Pesche:
-    months: [Giugno, Luglio, Agosto, Settembre]
+    months: [6, 7, 8, 9]
 Pompelmi:
-    months: [Novembre, Dicembre, Gennaio, Febbraio, Marzo, Aprile, Maggio]
+    months: [11, 12, 1, 2, 3, 4, 5]
 Prugne:
-    months: [Luglio, Agosto, Settembre]
+    months: [7, 8, 9]
 Susine:
-    months: [Giugno, Luglio, Agosto, Settembre]
+    months: [6, 7, 8, 9]
 Uva:
-    months: [Agosto, Settembre, Ottobre, Novembre]
+    months: [8, 9, 10, 11]
 
