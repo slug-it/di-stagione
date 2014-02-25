@@ -49,7 +49,7 @@ class MonthDetailPageFragment(val fixedContent: String) extends Fragment {
     {
         val activity = getActivity()
         val text = new TextView(activity);
-        text.setTypeface(activity.tf_element)
+        // text.setTypeface(activity.tf_element)
         text.setGravity(Gravity.CENTER);
         text.setText(_fixedContent);
         text.setTextSize(20 * getResources().getDisplayMetrics().density);

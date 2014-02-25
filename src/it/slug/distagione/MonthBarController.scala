@@ -32,7 +32,7 @@ class MonthBarController(val barWidget: TabBar, val ctxt: Context)
         R.attr.TabBarItemAutumnStyle,   // september
         R.attr.TabBarItemAutumnStyle,   // october
         R.attr.TabBarItemAutumnStyle,   // november
-        R.attr.TabBarItemWinterStyle,   // december
+        R.attr.TabBarItemWinterStyle    // december
         )
 
     for ((x, i) <- mMonths.zipWithIndex) {
