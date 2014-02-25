@@ -9,6 +9,7 @@ import android.content.Context
 import android.content.Intent
 import android.view.Menu
 import android.view.View
+import android.view.Window
 import android.view.MenuItem
 import android.util.Log
 import android.util.AttributeSet
@@ -28,6 +29,7 @@ class ListaDiStagione extends FragmentActivity with TypedViewHolder {
 
     override def onCreate(saved: Bundle) : Unit = {
         super.onCreate(saved)
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main)
 
         // widgets
