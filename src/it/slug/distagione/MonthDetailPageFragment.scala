@@ -13,7 +13,7 @@ import android.widget.TextView;
 /*
     Fragment class for a single page shown in the month detail activity.
  */
-class MonthDetailPageFragment(val fixedContent: String) extends Fragment {
+class MonthDetailPageFragment() extends Fragment {
 
     /* ------------ ctor --------------------------------------------------- */
     // in Scala language, the class body is the first constructor
@@ -29,7 +29,7 @@ class MonthDetailPageFragment(val fixedContent: String) extends Fragment {
             _fixedContent = savedState.getString(_myKey)
         } else {
             var (builder, i) = (new StringBuilder(), 0)
-            for (i <- 0 until 20) builder.append(fixedContent).append(" ")
+            for (i <- 0 until 20) builder.append(_fixedContent).append("\n")
             builder.deleteCharAt(builder.length() - 1)
             _fixedContent = builder.toString()
         }

@@ -78,7 +78,9 @@ class MonthDetailPagerController(
         }
 
         override def getItem(position: Int): Fragment = {
-            new MonthDetailPageFragment(mMonths(position))
+            val pf = new MonthDetailPageFragment()
+            pf._fixedContent = mMonths(position)
+            pf
         }
     }
     /* --------------------------------------------------------------------- */
