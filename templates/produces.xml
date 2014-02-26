@@ -2,7 +2,7 @@
 <resources>
     <!-- List of produces by month -->
 {% for month_data in produce_by_month %}
-    <string-array name="{{month_data.month}}"> <!-- {{month_data.name}} -->
+    <string-array name="month{{month_data.month}}"> <!-- {{month_data.name}} -->
     {%- for prod in month_data.produces %}
         <item>{{prod.name}}</item>
     {%- endfor %}
