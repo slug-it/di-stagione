@@ -1,5 +1,6 @@
 package it.slug.distagione
 
+import java.util.Date
 import android.util.Log
 
 /* Scala enum example.
@@ -21,7 +22,8 @@ abstract class ViewStateListener {
 
 object ViewState {
     /* ------------ ctor --------------------------------------------------- */
-    private var mSelectedMonth: Int = 0
+    private var mCurrentMonth: Int = new Date().getMonth
+    private var mSelectedMonth: Int = mCurrentMonth
     private var mListeners: List[ViewStateListener] = Nil
     /* --------------------------------------------------------------------- */
 
