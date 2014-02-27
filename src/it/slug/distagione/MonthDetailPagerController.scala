@@ -34,11 +34,11 @@ class MonthDetailPagerController(
     private val fragManager = mCtxt.getSupportFragmentManager()
     mPager.setOnPageChangeListener(new MonthDetailPagerListener())
     mPager.setAdapter(new MonthDetailPagerAdapter(fragManager))
-    onCurrentMonthChange(mView.currentMonth)
+    onSelectedMonthChange(mView.selectedMonth)
     /* --------------------------------------------------------------------- */
 
     /* ------------ model handlers ----------------------------------------- */
-    def onCurrentMonthChange(newMonth: Int): Unit = {
+    def onSelectedMonthChange(newMonth: Int): Unit = {
         if (mCurrentPage == newMonth) return
         mCurrentPage = newMonth
         mPager.setCurrentItem(mCurrentPage)
@@ -58,7 +58,7 @@ class MonthDetailPagerController(
 
         override def onPageSelected(position: Int): Unit = {
             mCurrentPage = position
-            mView.currentMonth = position
+            mView.selectedMonth = position
         }
     }
     /* --------------------------------------------------------------------- */

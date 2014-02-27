@@ -39,11 +39,11 @@ class MonthBarController(val barWidget: TabBar, val ctxt: Context)
         val newItem = mBar.addTab(x, monthStyles(i))
         newItem.setOnClickListener(new ItemClickListener(i))
     }
-    mBar.setCurrentItem(mView.currentMonth)
+    mBar.setCurrentItem(mView.selectedMonth)
     /* --------------------------------------------------------------------- */
 
     /* ------------ model handlers ----------------------------------------- */
-    def onCurrentMonthChange(newMonth: Int): Unit = {
+    def onSelectedMonthChange(newMonth: Int): Unit = {
         if (mBar.selectedIndex == newMonth) return
         mBar.setCurrentItem(newMonth)
     }
@@ -55,7 +55,7 @@ class MonthBarController(val barWidget: TabBar, val ctxt: Context)
         private val itemIndex: Integer = index
 
         override def onClick(v: View): Unit = {
-            mView.currentMonth = itemIndex
+            mView.selectedMonth = itemIndex
         }
     }
     /* --------------------------------------------------------------------- */

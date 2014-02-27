@@ -16,32 +16,32 @@ object MonthName extends Enumeration {
     "user preferences" on application shutdown.
  */
 abstract class ViewStateListener {
-    def onCurrentMonthChange(newMonth: Int): Unit
+    def onSelectedMonthChange(newMonth: Int): Unit
 }
 
 object ViewState {
     /* ------------ ctor --------------------------------------------------- */
-    private var mCurrentMonth: Int = 0
+    private var mSelectedMonth: Int = 0
     private var mListeners: List[ViewStateListener] = Nil
     /* --------------------------------------------------------------------- */
 
     /* ------------ object access ------------------------------------------ */
-    def currentMonth = mCurrentMonth
+    def selectedMonth = mSelectedMonth
     /* --------------------------------------------------------------------- */
 
     /* ------------ object manipulation ------------------------------------ */
     def addListener(l: ViewStateListener): Unit = mListeners ::= l
 
-    def currentMonth_= (newMonth: Int): Unit = {
-        if (mCurrentMonth == newMonth) return
-        mCurrentMonth = newMonth
+    def selectedMonth_= (newMonth: Int): Unit = {
+        if (mSelectedMonth == newMonth) return
+        mSelectedMonth = newMonth
         notifyMonthChange()
     }
     /* --------------------------------------------------------------------- */
 
     /* ------------ private members ---------------------------------------- */
     private def notifyMonthChange(): Unit = {
-        for (l <- mListeners) l.onCurrentMonthChange(mCurrentMonth)
+        for (l <- mListeners) l.onSelectedMonthChange(mSelectedMonth)
     }
     /* --------------------------------------------------------------------- */
 }
