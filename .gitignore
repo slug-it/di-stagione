@@ -5,3 +5,15 @@ project/target
 target
 .idea
 .lib-src/
+.DS_Store
+.history
+tags
+res/values/produces.xml
+data/it/produce-by-name.yaml
+data/it/produce-by-month.yaml
+di-stagione.iml
+launch.cfg
+local.properties
+nohup.out
+build.xml
+*.log
