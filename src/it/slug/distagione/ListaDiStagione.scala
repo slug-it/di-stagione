@@ -24,8 +24,7 @@ class ListaDiStagione extends FragmentActivity with TypedViewHolder {
     lazy val tf_title = Typeface.createFromAsset(
         getAssets, "fonts/OverlockSC-Regular.ttf")
     */
-    lazy val tf_element = Typeface.createFromAsset(
-        getAssets, "fonts/SortsMillGoudy-Regular.ttf")
+    lazy val tf_element = Typeface.createFromAsset(getAssets, "fonts/SortsMillGoudy-Regular.ttf")
 
     override def onCreate(saved: Bundle) : Unit = {
         super.onCreate(saved)

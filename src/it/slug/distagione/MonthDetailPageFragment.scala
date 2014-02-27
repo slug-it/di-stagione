@@ -47,14 +47,14 @@ class MonthDetailPageFragment() extends Fragment {
         savedState: Bundle
         ) : View =
     {
-        val activity = getActivity()
+        val activity = getActivity().asInstanceOf[ListaDiStagione]
         val text = new TextView(activity);
-        // text.setTypeface(activity.tf_element)
+        text.setTypeface(activity.tf_element)
         text.setGravity(Gravity.CENTER);
         text.setText(_fixedContent);
         text.setTextSize(20 * getResources().getDisplayMetrics().density);
         text.setPadding(20, 20, 20, 20);
-        val layout = new LinearLayout(getActivity());
+        val layout = new LinearLayout(activity);
         layout.setLayoutParams(
             new LayoutParams(
                 LayoutParams.FILL_PARENT,
