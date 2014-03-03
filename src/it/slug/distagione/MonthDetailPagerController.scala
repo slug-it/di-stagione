@@ -67,18 +67,6 @@ class MonthDetailPagerController(
     class MonthDetailPagerAdapter(val fm: FragmentManager)
         extends FragmentPagerAdapter(fm)
     {
-        val monthProduces = Array(R.array.month1,
-                                  R.array.month2,
-                                  R.array.month3,
-                                  R.array.month4,
-                                  R.array.month5,
-                                  R.array.month6,
-                                  R.array.month7,
-                                  R.array.month8,
-                                  R.array.month9,
-                                  R.array.month10,
-                                  R.array.month11,
-                                  R.array.month12)
         val res = mCtxt.getResources()
         val mMonths = res.getStringArray(R.array.months_ext)
 
@@ -91,8 +79,7 @@ class MonthDetailPagerController(
 
         override def getItem(position: Int): Fragment = {
             val pf = new MonthDetailPageFragment()
-            val mProduces = res.getStringArray(monthProduces(position))
-            pf._fixedContent = mProduces(5)
+            pf.setMonthIndex(res, position)
             pf
         }
     }
