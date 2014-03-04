@@ -7,6 +7,16 @@
         <item>{{prod.name}}</item>
     {%- endfor %}
     </string-array>
+    <string-array name="month{{month_data.month}}_early">
+    {%- for prod in month_data.early %}
+        <item>{{prod}}</item>
+    {%- endfor %}
+    </string-array>
+    <string-array name="month{{month_data.month}}_late">
+    {%- for prod in month_data.late %}
+        <item>{{prod}}</item>
+    {%- endfor %}
+    </string-array>
 {% endfor %}
     <!-- List of months by produce
 {% for produce in produces %}

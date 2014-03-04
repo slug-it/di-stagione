@@ -34,5 +34,13 @@ def args():
 
 if __name__ == "__main__":
     produce_by_month = yaml.load(open('data/it/produce-by-month.yaml'))
+    # [{month: '', name: '', produces: [...]}]
+    pm1 = produce_by_month[-1:] + produce_by_month[:-1]
+    pm2 = produce_by_month
+    for m1, m2 in zip(pm1, pm2):
+        p1 = set(p['name'] for p in m1['produces'])
+        p2 = set(p['name'] for p in m2['produces'])
+        m2['early'] = p2 - p1
+        m1['late'] = p1 - p2
     target = args().target
     globals()['generate_'+target](produce_by_month)
