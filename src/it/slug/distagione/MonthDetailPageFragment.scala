@@ -24,25 +24,16 @@ class MonthDetailPageFragment() extends Fragment {
 
     /* ------------ ctor ---------------------------------------------------- */
     // in Scala language, the class body is the first constructor
-    private val monthProduces = Array(
-        R.array.month1,
-        R.array.month2,
-        R.array.month3,
-        R.array.month4,
-        R.array.month5,
-        R.array.month6,
-        R.array.month7,
-        R.array.month8,
-        R.array.month9,
-        R.array.month10,
-        R.array.month11,
-        R.array.month12
-        )
-
     private var tf_element: Typeface = null
     var mMonthIndex = -1
     val _myKey = "MonthDetailPageFragment::State"
     /* ---------------------------------------------------------------------- */
+    def monthProduces(idx: Integer): Array[String] = {
+        val act = getActivity()
+        val res = act.getResources()
+        val prod = res.getIdentifier("month"+(idx+1), "array", act.getPackageName())
+        res.getStringArray(prod)
+    }
 
     /* ------------ public members ------------------------------------------ */
     def setMonthIndex(monthIndex: Integer): Unit = {
@@ -86,7 +77,7 @@ class MonthDetailPageFragment() extends Fragment {
         val adapter = new MyArrayAdapter[String](
             activity,
             android.R.layout.simple_list_item_1,
-            activity.getResources().getStringArray(monthProduces(mMonthIndex))
+            monthProduces(mMonthIndex)
             )
         list.setAdapter(adapter)
 
