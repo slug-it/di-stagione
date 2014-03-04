@@ -8,8 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.TextView;
+import android.widget.ListView;
 import android.content.res.Resources;
+import android.widget.ArrayAdapter
 
 
 /*
@@ -17,62 +18,77 @@ import android.content.res.Resources;
  */
 class MonthDetailPageFragment() extends Fragment {
 
-    /* ------------ ctor --------------------------------------------------- */
+    /* ------------ ctor ---------------------------------------------------- */
     // in Scala language, the class body is the first constructor
-    private val monthProduces = Array(R.array.month1,
-                                  R.array.month2,
-                                  R.array.month3,
-                                  R.array.month4,
-                                  R.array.month5,
-                                  R.array.month6,
-                                  R.array.month7,
-                                  R.array.month8,
-                                  R.array.month9,
-                                  R.array.month10,
-                                  R.array.month11,
-                                  R.array.month12)
+    private val monthProduces = Array(
+        R.array.month1,
+        R.array.month2,
+        R.array.month3,
+        R.array.month4,
+        R.array.month5,
+        R.array.month6,
+        R.array.month7,
+        R.array.month8,
+        R.array.month9,
+        R.array.month10,
+        R.array.month11,
+        R.array.month12
+        )
 
-    var _fixedContent = ""
+    var mMonthIndex = -1
     val _myKey = "MonthDetailPageFragment::State"
-    /* --------------------------------------------------------------------- */
+    /* ---------------------------------------------------------------------- */
 
-    def setMonthIndex(res: Resources, idx: Integer): Unit = {
+    /* ------------ public members ------------------------------------------ */
+    def setMonthIndex(monthIndex: Integer): Unit = {
+        mMonthIndex = monthIndex
+        /*
         val mProduces = res.getStringArray(monthProduces(idx))
         var builder = new StringBuilder()
         for ((x, i) <- mProduces.zipWithIndex) {
             builder.append(x).append('\n')
         }
         _fixedContent = builder.toString()
+        */
     }
+    /* ---------------------------------------------------------------------- */
 
-    /* ------------ protected members -------------------------------------- */
-    override def onCreate(savedState: Bundle) : Unit =
-    {
+    /* ------------ protected members --------------------------------------- */
+    override def onCreate(savedState: Bundle) : Unit = {
         super.onCreate(savedState)
         if (savedState != null && savedState.containsKey(_myKey)) {
-            _fixedContent = savedState.getString(_myKey)
+            mMonthIndex = savedState.getInt(_myKey)
         }
     }
 
-    override def onSaveInstanceState(outState: Bundle) : Unit =
-    {
+    override def onSaveInstanceState(outState: Bundle) : Unit = {
         super.onSaveInstanceState(outState)
-        outState.putString(_myKey, _fixedContent)
+        outState.putInt(_myKey, mMonthIndex)
     }
 
     override def onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup,
-        savedState: Bundle
-        ) : View =
-    {
+            inflater: LayoutInflater,
+            container: ViewGroup,
+            savedState: Bundle
+            ) : View = {
         val activity = getActivity().asInstanceOf[ListaDiStagione]
-        val text = new TextView(activity);
-        text.setTypeface(activity.tf_element)
-        text.setGravity(Gravity.CENTER);
-        text.setText(_fixedContent);
-        text.setTextSize(20 * getResources().getDisplayMetrics().density);
-        text.setPadding(20, 20, 20, 20);
+
+        // build list
+        val list = new ListView(activity);
+        // text.setTypeface(activity.tf_element)
+        // text.setGravity(Gravity.CENTER);
+        // text.setText(_fixedContent);
+        // text.setTextSize(20 * getResources().getDisplayMetrics().density);
+        // text.setPadding(20, 20, 20, 20);
+
+        val adapter = new ArrayAdapter[String](
+            activity,
+            android.R.layout.simple_list_item_1,
+            activity.getResources().getStringArray(monthProduces(mMonthIndex))
+            )
+        list.setAdapter(adapter)
+
+        // create layout and add list as child
         val layout = new LinearLayout(activity);
         layout.setLayoutParams(
             new LayoutParams(
@@ -81,9 +97,9 @@ class MonthDetailPageFragment() extends Fragment {
                 )
             );
         layout.setGravity(Gravity.CENTER);
-        layout.addView(text);
+        layout.addView(list);
 
         layout;
     }
-    /* --------------------------------------------------------------------- */
+    /* ---------------------------------------------------------------------- */
 }

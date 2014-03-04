@@ -79,7 +79,7 @@ class MonthDetailPagerController(
 
         override def getItem(position: Int): Fragment = {
             val pf = new MonthDetailPageFragment()
-            pf.setMonthIndex(res, position)
+            pf.setMonthIndex(position)
             pf
         }
     }
