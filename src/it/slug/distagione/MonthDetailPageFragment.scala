@@ -1,5 +1,6 @@
 package it.slug.distagione
 
+import java.lang.Object
 import android.support.v4.app.Fragment
 import android.os.Bundle
 import android.view.Gravity;
@@ -9,8 +10,11 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ListView;
+import android.graphics.Typeface
 import android.content.res.Resources;
-import android.widget.ArrayAdapter
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+import android.content.Context;
 
 
 /*
@@ -35,6 +39,7 @@ class MonthDetailPageFragment() extends Fragment {
         R.array.month12
         )
 
+    private var tf_element: Typeface = null
     var mMonthIndex = -1
     val _myKey = "MonthDetailPageFragment::State"
     /* ---------------------------------------------------------------------- */
@@ -65,6 +70,11 @@ class MonthDetailPageFragment() extends Fragment {
             ) : View = {
         val activity = getActivity().asInstanceOf[ListaDiStagione]
 
+        tf_element = Typeface.createFromAsset(
+            activity.getAssets,
+            "fonts/SortsMillGoudy-Regular.ttf"
+            )
+
         // build list
         val list = new ListView(activity);
         // text.setTypeface(activity.tf_element)
@@ -73,7 +83,7 @@ class MonthDetailPageFragment() extends Fragment {
         // text.setTextSize(20 * getResources().getDisplayMetrics().density);
         // text.setPadding(20, 20, 20, 20);
 
-        val adapter = new ArrayAdapter[String](
+        val adapter = new MyArrayAdapter[String](
             activity,
             android.R.layout.simple_list_item_1,
             activity.getResources().getStringArray(monthProduces(mMonthIndex))
@@ -92,6 +102,19 @@ class MonthDetailPageFragment() extends Fragment {
         layout.addView(list);
 
         layout;
+    }
+    /* ---------------------------------------------------------------------- */
+
+
+    /* ------------ custom array adapter ------------------------------------ */
+    class MyArrayAdapter[T](ctxt: Context, r: Integer, os: Array[T with Object])
+        extends ArrayAdapter[T](ctxt, r, os)
+    {
+        override def getView(pos: Int, v: View, vg: ViewGroup): View = {
+            val tv = super.getView(pos, v, vg).asInstanceOf[TextView]
+            tv.setTypeface(tf_element)
+            tv
+        }
     }
     /* ---------------------------------------------------------------------- */
 }
