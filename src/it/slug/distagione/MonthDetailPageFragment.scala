@@ -42,14 +42,6 @@ class MonthDetailPageFragment() extends Fragment {
     /* ------------ public members ------------------------------------------ */
     def setMonthIndex(monthIndex: Integer): Unit = {
         mMonthIndex = monthIndex
-        /*
-        val mProduces = res.getStringArray(monthProduces(idx))
-        var builder = new StringBuilder()
-        for ((x, i) <- mProduces.zipWithIndex) {
-            builder.append(x).append('\n')
-        }
-        _fixedContent = builder.toString()
-        */
     }
     /* ---------------------------------------------------------------------- */
 

@@ -16,4 +16,9 @@
     <color name="background_dark">#ff000000</color>
 
     <color name="bar_item_foreground">#ff000000</color>
+
+    <color name="winter_color">#ffAAFFFF</color>
+    <color name="spring_color">#ff66FF66</color>
+    <color name="summer_color">#ffFFFF66</color>
+    <color name="autumn_color">#ffFFAA66</color>
 </resources>
