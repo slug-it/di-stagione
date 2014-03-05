@@ -19,15 +19,6 @@ import android.widget.TextView
 
 class ListaDiStagione extends FragmentActivity with TypedViewHolder {
 
-    /*
-    lazy val tf_title = Typeface.createFromAsset(
-        getAssets, "fonts/OverlockSC-Regular.ttf")
-    */
-    lazy val tf_element = Typeface.createFromAsset(
-        getAssets,
-        "fonts/SortsMillGoudy-Regular.ttf"
-        )
-
     private val mMonthColors = Array(
         R.color.winter_color,   // january
         R.color.winter_color,   // february
@@ -48,6 +39,10 @@ class ListaDiStagione extends FragmentActivity with TypedViewHolder {
 
     override def onCreate(saved: Bundle) : Unit = {
         super.onCreate(saved)
+
+        val tf_title = Typeface.createFromAsset(getAssets, "fonts/OverlockSC-Regular.ttf")
+        val tf_element = Typeface.createFromAsset(getAssets, "fonts/SortsMillGoudy-Regular.ttf")
+
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.main)
 
@@ -65,7 +60,7 @@ class ListaDiStagione extends FragmentActivity with TypedViewHolder {
         val barController = new MonthBarController(monthBar, this)
 
         // widgets initializations
-        mMonthTitle.setTypeface(tf_element)
+        mMonthTitle.setTypeface(tf_title)
         setMonthTitle(ViewState.selectedMonth)
     }
 
