@@ -85,8 +85,7 @@ class ListaDiStagione extends FragmentActivity with TypedViewHolder {
 
     private def setMonthTitle(newMonth: Int): Unit = {
         val mMonths = getResources().getStringArray(R.array.months_ext)
-        val mAppName = getResources().getString(R.string.app_name)
-        mMonthTitle.setText(mAppName + " " + mMonths(newMonth))
+        mMonthTitle.setText(mMonths(newMonth))
         mMonthTitle.setBackgroundResource(mMonthColors(newMonth))
     }
 
