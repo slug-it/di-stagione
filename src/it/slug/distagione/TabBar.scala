@@ -13,7 +13,7 @@ import android.content.Context
 class TabBar(ctxt: Context, as: AttributeSet)
     extends HorizontalScrollView(ctxt, as)
 {
-    /* ------------ ctor --------------------------------------------------- */
+    /* ------------ ctor ---------------------------------------------------- */
     // view variables
     private var mLayout = new LinearLayout(ctxt)
 
@@ -32,9 +32,9 @@ class TabBar(ctxt: Context, as: AttributeSet)
             LayoutParams.MATCH_PARENT
             )
         )
-    /* --------------------------------------------------------------------- */
+    /* ---------------------------------------------------------------------- */
 
-    /* ------------ public members ----------------------------------------- */
+    /* ------------ public members ------------------------------------------ */
     def addTab(text: CharSequence, style: Int): TabBarItem = {
         val newItem = new TabBarItem(getContext(), style)
         newItem.setFocusable(true)
@@ -66,9 +66,9 @@ class TabBar(ctxt: Context, as: AttributeSet)
     }
 
     def item(name: CharSequence): Option[TextView] = entries.get(name)
-    /* --------------------------------------------------------------------- */
+    /* ---------------------------------------------------------------------- */
 
-    /* ------------ events overriding -------------------------------------- */
+    /* ------------ events overriding --------------------------------------- */
     override def onMeasure(widthSpec: Int, heightSpec: Int): Unit = {
         // retrieve width infos
         val widthMode = MeasureSpec.getMode(widthSpec)
@@ -110,9 +110,9 @@ class TabBar(ctxt: Context, as: AttributeSet)
         super.onDetachedFromWindow()
         cancelAnimation()
     }
-    /* --------------------------------------------------------------------- */
+    /* ---------------------------------------------------------------------- */
 
-    /* ------------ private members ---------------------------------------- */
+    /* ------------ private members ----------------------------------------- */
     private def cancelAnimation(): Unit = {
         if (mAnimation != null) removeCallbacks(mAnimation)
     }
@@ -134,7 +134,7 @@ class TabBar(ctxt: Context, as: AttributeSet)
             }
         }
     }
-    /* --------------------------------------------------------------------- */
+    /* ---------------------------------------------------------------------- */
 }
 
 class TabBarItem(ctxt: Context, style: Int)

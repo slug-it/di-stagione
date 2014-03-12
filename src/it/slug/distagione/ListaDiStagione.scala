@@ -1,20 +1,13 @@
 package it.slug.distagione
 
-import android.app.Activity
+import android.support.v4.app.FragmentActivity
 import android.os.Bundle
-import android.graphics.Color
 import android.graphics.Typeface
-import android.widget.Button
-import android.content.Context
+import android.widget.TextView
 import android.content.Intent
 import android.view.Menu
-import android.view.View
 import android.view.Window
 import android.view.MenuItem
-import android.util.Log
-import android.util.AttributeSet
-import android.support.v4.app.FragmentActivity
-import android.widget.TextView
 
 
 class ListaDiStagione extends FragmentActivity with TypedViewHolder {

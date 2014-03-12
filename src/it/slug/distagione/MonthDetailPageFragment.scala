@@ -3,18 +3,17 @@ package it.slug.distagione
 import java.lang.Object
 import android.support.v4.app.Fragment
 import android.os.Bundle
-import android.view.Gravity;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.view.ViewGroup.LayoutParams;
-import android.widget.ListView;
+import android.content.Context
 import android.graphics.Typeface
-import android.content.res.Resources;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
-import android.content.Context;
+import android.view.Gravity
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.view.ViewGroup.LayoutParams
+import android.widget.LinearLayout
+import android.widget.ListView
+import android.widget.ArrayAdapter
+import android.widget.TextView
 
 
 /*
@@ -31,7 +30,11 @@ class MonthDetailPageFragment() extends Fragment {
     def monthProduces(idx: Integer): Array[String] = {
         val act = getActivity()
         val res = act.getResources()
-        val prod = res.getIdentifier("month"+(idx+1), "array", act.getPackageName())
+        val prod = res.getIdentifier(
+            "month"+(idx+1),
+            "array",
+            act.getPackageName()
+            )
         res.getStringArray(prod)
     }
 
@@ -68,12 +71,6 @@ class MonthDetailPageFragment() extends Fragment {
 
         // build list
         val list = new ListView(activity);
-        // text.setTypeface(activity.tf_element)
-        // text.setGravity(Gravity.CENTER);
-        // text.setText(_fixedContent);
-        // text.setTextSize(20 * getResources().getDisplayMetrics().density);
-        // text.setPadding(20, 20, 20, 20);
-
         val adapter = new MyArrayAdapter[String](
             activity,
             android.R.layout.simple_list_item_1,

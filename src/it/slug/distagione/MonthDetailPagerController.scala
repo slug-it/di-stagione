@@ -7,7 +7,6 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentActivity
 import android.support.v4.view.ViewPager
 import android.support.v4.view.ViewPager.OnPageChangeListener
-import android.content.Context
 
 
 class MonthDetailPagerController(
@@ -16,7 +15,7 @@ class MonthDetailPagerController(
     )
     extends ViewStateListener
 {
-    /* ------------ ctor --------------------------------------------------- */
+    /* ------------ ctor ---------------------------------------------------- */
     // model vars
     private val mCtxt = ctxt
 
@@ -35,17 +34,17 @@ class MonthDetailPagerController(
     mPager.setOnPageChangeListener(new MonthDetailPagerListener())
     mPager.setAdapter(new MonthDetailPagerAdapter(fragManager))
     onSelectedMonthChange(mView.selectedMonth)
-    /* --------------------------------------------------------------------- */
+    /* ---------------------------------------------------------------------- */
 
-    /* ------------ model handlers ----------------------------------------- */
+    /* ------------ model handlers ------------------------------------------ */
     def onSelectedMonthChange(newMonth: Int): Unit = {
         if (mCurrentPage == newMonth) return
         mCurrentPage = newMonth
         mPager.setCurrentItem(mCurrentPage)
     }
-    /* --------------------------------------------------------------------- */
+    /* ---------------------------------------------------------------------- */
 
-    /* ------------ view handlers ------------------------------------------ */
+    /* ------------ view handlers ------------------------------------------- */
     class MonthDetailPagerListener extends OnPageChangeListener
     {
         override def onPageScrollStateChanged(state: Int): Unit = {}
@@ -61,9 +60,9 @@ class MonthDetailPagerController(
             mView.selectedMonth = position
         }
     }
-    /* --------------------------------------------------------------------- */
+    /* ---------------------------------------------------------------------- */
 
-    /* ------------ pager adapter class ------------------------------------ */
+    /* ------------ pager adapter class ------------------------------------- */
     class MonthDetailPagerAdapter(val fm: FragmentManager)
         extends FragmentPagerAdapter(fm)
     {
@@ -83,5 +82,5 @@ class MonthDetailPagerController(
             pf
         }
     }
-    /* --------------------------------------------------------------------- */
+    /* ---------------------------------------------------------------------- */
 }

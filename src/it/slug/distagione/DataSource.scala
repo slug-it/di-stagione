@@ -3,15 +3,8 @@ package it.slug.distagione
 import java.util.Date
 import android.util.Log
 
-/* Scala enum example.
-object MonthName extends Enumeration {
-    type MonthName = Value
-    val January, February, March, April, May, June, July, August,
-        Semptember, October, November, December = Value
-}
-*/
 
-/* **************** view state ********************************************* */
+/* **************** view state ********************************************** */
 /*
     This singleton containes view-specific settings, that should be saved as
     "user preferences" on application shutdown.
@@ -21,17 +14,17 @@ abstract class ViewStateListener {
 }
 
 object ViewState {
-    /* ------------ ctor --------------------------------------------------- */
-    private var mCurrentMonth: Int = new Date().getMonth
+    /* ------------ ctor ---------------------------------------------------- */
+    private val mCurrentMonth: Int = new Date().getMonth
     private var mSelectedMonth: Int = mCurrentMonth
     private var mListeners: List[ViewStateListener] = Nil
-    /* --------------------------------------------------------------------- */
+    /* ---------------------------------------------------------------------- */
 
-    /* ------------ object access ------------------------------------------ */
+    /* ------------ object read --------------------------------------------- */
     def selectedMonth = mSelectedMonth
-    /* --------------------------------------------------------------------- */
+    /* ---------------------------------------------------------------------- */
 
-    /* ------------ object manipulation ------------------------------------ */
+    /* ------------ object write -------------------------------------------- */
     def addListener(l: ViewStateListener): Unit = mListeners ::= l
 
     def selectedMonth_= (newMonth: Int): Unit = {
@@ -39,13 +32,13 @@ object ViewState {
         mSelectedMonth = newMonth
         notifyMonthChange()
     }
-    /* --------------------------------------------------------------------- */
+    /* ---------------------------------------------------------------------- */
 
-    /* ------------ private members ---------------------------------------- */
+    /* ------------ private members ----------------------------------------- */
     private def notifyMonthChange(): Unit = {
         for (l <- mListeners) l.onSelectedMonthChange(mSelectedMonth)
     }
-    /* --------------------------------------------------------------------- */
+    /* ---------------------------------------------------------------------- */
 }
-/* ************************************************************************* */
+/* ************************************************************************** */
 
