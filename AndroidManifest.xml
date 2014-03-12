@@ -21,8 +21,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="ItemDetailActivity"
-                  android:label="@string/item_detail_activity_name" >
+        <activity android:name="AboutActivity"
+                  android:label="@string/about_activity_name"
+                  android:theme="@style/DSThemeLight">
         </activity>
 
     </application>

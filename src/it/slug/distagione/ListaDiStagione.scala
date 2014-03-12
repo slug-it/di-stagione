@@ -72,9 +72,9 @@ class ListaDiStagione extends FragmentActivity with TypedViewHolder {
     override def onOptionsItemSelected(item: MenuItem) : Boolean = {
         item.getItemId() match {
 
-        case R.id.test_detail_menu => {
+        case R.id.about_menu => {
             val intent = new Intent(ListaDiStagione.this,
-                                    classOf[ItemDetailActivity])
+                                    classOf[AboutActivity])
             startActivity(intent)
             return true
         }
