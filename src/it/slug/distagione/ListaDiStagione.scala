@@ -3,12 +3,15 @@ package it.slug.distagione
 import android.support.v4.app.FragmentActivity
 import android.os.Bundle
 import android.graphics.Typeface
-import android.widget.TextView
 import android.content.Intent
 import android.view.Menu
 import android.view.Window
 import android.view.MenuItem
+import android.view.View
+import android.view.View.OnClickListener
 import android.widget.RelativeLayout
+import android.widget.ImageView
+import android.widget.TextView
 
 
 class ListaDiStagione extends FragmentActivity with TypedViewHolder {
@@ -31,6 +34,7 @@ class ListaDiStagione extends FragmentActivity with TypedViewHolder {
     private var mMonthTitleBar: RelativeLayout = null
     private var mInnerListener: MyListener = null
     private var mMonthTitle: TextView = null
+    private var mInfoImage: ImageView = null
 
     override def onCreate(saved: Bundle) : Unit = {
         super.onCreate(saved)
@@ -50,10 +54,16 @@ class ListaDiStagione extends FragmentActivity with TypedViewHolder {
         val monthBar = findView(TR.month_bar)
         mMonthTitleBar = findView(TR.title_bar)
         mMonthTitle = findView(TR.month_title)
+        mInfoImage = findView(TR.info_icon)
 
         // controllers
         val pagerController = new MonthDetailPagerController(pagerWidget, this)
         val barController = new MonthBarController(monthBar, this)
+        mInfoImage.setOnClickListener(new OnClickListener() {
+            def onClick(view: View) {
+                startActivity(new Intent(ListaDiStagione.this, classOf[AboutActivity]))
+            }
+        })
 
         // widgets initializations
         mMonthTitle.setTypeface(tf_title)
