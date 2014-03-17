@@ -8,6 +8,7 @@ import android.content.Intent
 import android.view.Menu
 import android.view.Window
 import android.view.MenuItem
+import android.widget.RelativeLayout
 
 
 class ListaDiStagione extends FragmentActivity with TypedViewHolder {
@@ -27,8 +28,9 @@ class ListaDiStagione extends FragmentActivity with TypedViewHolder {
         R.color.winter_color    // december
         )
 
-    private var mMonthTitle: TextView = null
+    private var mMonthTitleBar: RelativeLayout = null
     private var mInnerListener: MyListener = null
+    private var mMonthTitle: TextView = null
 
     override def onCreate(saved: Bundle) : Unit = {
         super.onCreate(saved)
@@ -46,6 +48,7 @@ class ListaDiStagione extends FragmentActivity with TypedViewHolder {
         // widgets
         val pagerWidget = findView(TR.month_pager)
         val monthBar = findView(TR.month_bar)
+        mMonthTitleBar = findView(TR.title_bar)
         mMonthTitle = findView(TR.month_title)
 
         // controllers
@@ -79,7 +82,7 @@ class ListaDiStagione extends FragmentActivity with TypedViewHolder {
     private def setMonthTitle(newMonth: Int): Unit = {
         val mMonths = getResources().getStringArray(R.array.months_ext)
         mMonthTitle.setText(mMonths(newMonth))
-        mMonthTitle.setBackgroundResource(mMonthColors(newMonth))
+        mMonthTitleBar.setBackgroundResource(mMonthColors(newMonth))
     }
 
     /* ------------ model handlers ------------------------------------------ */
