@@ -2,7 +2,7 @@ Aglio:
     months: [4, 5, 6, 7, 8, 9, 10, 11]
     image: http://pixabay.com/it/aglio-tagliente-aromatico-tubero-5807/
 Asparago:
-    months: [3, 4, 5, 6]
+    months: [3, 4, 5]
     image: http://pixabay.com/it/appetito-asparagi-cibo-verde-sano-2038/
 Bietola da costa:
     months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
@@ -15,45 +15,35 @@ Carota:
     months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     info: http://it.wikipedia.org/wiki/Carote
     image: http://pixabay.com/it/orange-carote-white-primo-piano-2794/
-Cavolo broccolo:
-    other-names: [Broccoli]
-    months: [2, 3, 4, 5, 9, 10, 11]
-    info: http://it.wikipedia.org/wiki/Cavolo_broccolo
+Cavolo:
+    months: [1, 2, 3, 11, 12]
     image: http://pixabay.com/it/broccoli-verdure-alimentari-cibo-5736/
 Cavolfiore:
-    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    months: [1, 2, 3, 4, 10, 11, 12]
     info: http://it.wikipedia.org/wiki/Cavolfiore
     image: http://pixabay.com/it/cavolfiore-kohl-cavolo-alimentari-68791/
-Cavolo cappuccio:
-    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-    info: http://it.wikipedia.org/wiki/Cavolo_cappuccio
-    image: http://commons.wikimedia.org/wiki/File:Starr_070730-7852_Brassica_oleracea_var._capitata.jpg
-Cavolo verza:
-    months: [9, 10, 11, 12, 1, 2, 3, 4]
-    info: http://it.wikipedia.org/wiki/Cavolo_verza
-    image: http://commons.wikimedia.org/wiki/File:Wirsingkohl.jpg
 Cetriolo:
-    months: [3, 4, 5, 6, 7, 8, 9, 10, 11]
+    months: [6, 7, 8, 9]
     image: http://pixabay.com/it/cetriolo-cucumis-cucurbitaceae-88207/
     # image: http://commons.wikimedia.org/wiki/File:HK_SYP_Best_of_Best_Vegetable_green_Cucumbers_Aug-2012.JPG
 Cicoria:
     months: [5, 6, 7, 8, 9, 10, 11, 12]
     info: http://it.wikipedia.org/wiki/Cicoria
-    image: 
+    image:
 Cipolla:
-    months: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    months: [4, 5, 6, 7]
     image: http://pixabay.com/it/bulbi-di-cipolla-cibo-fresco-sano-84722/
 Fagiolo:
     other-names: [Fagiolino]
     months: [4, 5, 6, 7, 8, 9, 10]
-    image: 
-Fava fresca:
+    image:
+Fava:
     other-names: [Baccello]
-    months: [4, 5, 6, 7, 8, 9, 10]
+    months: [4, 5, 6, 7]
     image: http://commons.wikimedia.org/wiki/File:Pecorino_romano_e_fave.jpg
 Finocchio:
-    months: [8, 9, 10, 11, 12, 1, 2, 3, 4]
-    image: 
+    months: [10, 11, 12, 1, 2, 3, 4]
+    image:
 Funghi:
     months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     image: http://pixabay.com/it/funghi-fungo-cremini-91333/
@@ -61,43 +51,43 @@ Insalate:
     months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     image: http://pixabay.com/it/impianto-vegetale-foglia-insalata-69447/
 Melanzana:
-    months: [4, 5, 6, 7, 8, 9, 10, 11]
+    months: [6, 7, 8, 9, 10]
     image: http://pixabay.com/it/melanzana-bio-dieta-cena-mangiare-1809/
 Peperone:
-    months: [4, 5, 6, 7, 8, 9, 10, 11]
+    months: [6, 7, 8, 9, 10]
     image: http://pixabay.com/it/pepe-giallo-cibo-verdure-vitamine-22111/
     #image: http://pixabay.com/it/verdure-paprika-colorato-verde-20710/
 Pisello:
     months: [5, 6, 7]
     image: http://pixabay.com/it/sfondo-dieta-cibo-fresco-72339/
 Pomodoro:
-    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    months: [5, 6, 7, 8, 9]
     image: http://pixabay.com/it/pomodori-verdure-rosso-alimentari-5356/
 Porri:
-    months: []
+    months: [1, 2, 3, 4, 9, 10, 11, 12]
     image: http://pixabay.com/it/porro-cipollotto-alimentari-mercato-65277/
 Prezzemolo:
-    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    months: [5, 6, 7, 8]
     image: http://pixabay.com/it/prezzemolo-verde-pianta-spice-78807/
 Radicchio:
     months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     image: http://pixabay.com/it/radicchio-insalata-foglie-di-lattuga-74315/
 Rapa:
-    months: [10, 11, 12, 1, 2, 3]
-    image: 
+    months: [10, 11, 1, 2, 3]
+    image:
 Ravanello:
-    months: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    months: [4, 5, 6, 7, 8, 9, 10]
     image: http://pixabay.com/it/ravanelli-verdure-alimentari-cibo-5740/
 Sedano:
-    months: [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    months: [1, 2, 3, 10, 11, 12]
     image: http://pixabay.com/it/sedano-verdure-sano-vitamine-74333/
 Spinacio:
     months: [9, 10, 11, 12, 1, 2, 3, 4, 5]
     image: http://pixabay.com/it/spinaci-reali-spinaci-verdure-verde-73911/
 Zucca:
-    months: [9, 10, 11, 12, 1, 2]
+    months: [8, 9, 10, 11, 12, 1, 2]
     image: http://pixabay.com/it/autunno-zucche-autunno-d-oro-77008/
 Zucchina:
-    months: [3, 4, 5, 6, 7, 8, 9, 10, 11]
-    image: 
+    months: [6, 7, 8, 9]
+    image:
 
