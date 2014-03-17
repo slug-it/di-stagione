@@ -1,5 +1,5 @@
 Albicocche:
-    months: [5, 6, 7, 8]
+    months: [6, 7, 8]
 Amarene:
     months: [6, 7]
 Anguria:
@@ -15,7 +15,7 @@ Ciliegie:
 Clementine:
     months: [10, 11, 12, 1, 2]
 Fragole:
-    months: [4, 5, 6, 7]
+    months: [5, 6]
 Kiwi:
     months: [11, 12, 1, 2, 3, 4, 5]
 Lamponi:
@@ -27,7 +27,7 @@ Fichi:
 Mandarini:
     months: [12, 1, 2]
 Mele:
-    months: [8, 9, 10, 11, 12, 1, 2, 3, 4, 5]
+    months: [9, 10, 11, 12, 1, 2, 3]
 Meloni:
     months: [5, 6, 7, 8, 9]
     other-names: [Poponi]
@@ -36,7 +36,7 @@ Mirtilli:
 Nespole:
     months: [4, 5]
 Pere:
-    months: [8, 9, 10, 11, 12, 1, 2, 3, 4, 5]
+    months: [9, 10, 11, 12, 1, 2]
 Pesche:
     months: [6, 7, 8, 9]
 Pompelmi:
