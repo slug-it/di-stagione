@@ -188,6 +188,14 @@ def main():
         # so we perform a deeper clean with find command
         os.system('find . -name target -type d -exec rm -rf {} \; -prune')
         os.system('find . -name bin -type d -exec rm -rf {} \; -prune')
+        os.system('make clean')
+
+    # generate xml data resources
+    logger.info('generating xml data..')
+    os.system('make clean')
+    if os.system('make') != 0:
+        logger.info('make command failed - aborting launch')
+        return 1
 
     if not opts.run:
         logger.info('building apk..')
