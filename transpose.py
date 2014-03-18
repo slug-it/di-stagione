@@ -13,7 +13,7 @@ def args():
                        help='source file')
     parser.add_argument('output', metavar='FILE', type=argparse.FileType('w+'),
                        help='output file')
-    parser.add_argument('--lang', choices=['it', 'es', 'en'], default='it',
+    parser.add_argument('--lang', choices=['it', 'es', 'en'], default='en',
                         help='language')
 
     args = parser.parse_args()
